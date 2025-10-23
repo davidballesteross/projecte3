@@ -100,11 +100,8 @@ Opcionalmente, agrega notas o asigna la credencial a una carpeta llamada “Corr
 Pulsa “Guardar”. Y la contraseña quedará almacenada de forma cifrada dentro del cofre de
 Bitwarden.
 
-
-
  <img src="img/imagen 17.png" alt="Interfaz de Bitwarden mostrando un aviso para guardar tiempo con el autocompletado al añadir un nuevo inicio de sesión.">
 
- 
 
 4. Guarda la credencial dentro del **cofre cifrado** de Bitwarden.
 
