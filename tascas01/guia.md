@@ -52,12 +52,17 @@
 
 ## 2. Generación de Contraseñas Seguras
 
-1. En Bitwarden, abre el **Generador de contraseñas** (`+` → *Inici de sessió*).  
-2. Configura los parámetros:  
+1. En Bitwarden, abre el **Generador de contraseñas** (`+` → *Inici de sessió*).
+
+<img src="img/imagen 10.png" alt="Menú principal de Bitwarden con el botón para añadir nuevos ítems a la caja fuerte">
+
+<img src="img/imagen 11.png" alt="Generador de contraseñas de Bitwarden mostrando una contraseña segura y opciones de longitud y caracteres">
+
+3. Configura los parámetros:  
    - Longitud: 14–20 caracteres.  
    - Incluir letras mayúsculas, minúsculas, números y símbolos.  
-3. Haz clic en **“Utilizar esta contraseña”** y guarda los cambios.  
-4. Se recomienda usar **mínimo 20 caracteres** para mayor seguridad.  
+4. Haz clic en **“Utilizar esta contraseña”** y guarda los cambios.  
+5. Se recomienda usar **mínimo 20 caracteres** para mayor seguridad.  
 
 ---
 
