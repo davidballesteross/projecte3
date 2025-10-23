@@ -35,3 +35,5 @@ Dins la carpeta `tasca01` es troben els següents arxius:
 Podeu consultar tots els documents fent clic al document corresponent:
 - Al arxiu [informe](informe.md) podeu trobar l'informe.
 - Al arxiu [guia](guia.md) podeu trobar la guia.
+
+[Tornar pàgina projecte](../README.md)
