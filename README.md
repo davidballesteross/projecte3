@@ -38,3 +38,4 @@ La metodologia segueix un model **àgil i col·laboratiu**, fent servir **GitHub
 ---
 
 ## Tasques
+- [Tasca01](tascas01/readme.md)
