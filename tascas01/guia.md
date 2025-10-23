@@ -19,21 +19,22 @@
 
 ## 1. Instalación y Configuración Inicial
 
-1. Visita la web oficial: [https://bitwarden.com](https://bitwarden.com).
+1. Abrir la página oficial: https://bitwarden.com [https://bitwarden.com](https://bitwarden.com).
 
 <img src="img/imagen 1.png" alt="Búsqueda en Google del sitio oficial de Bitwarden">
 
-2. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.
+2. Seleccionar la versión adecuada: escritorio, móvil o extensión navegador.
 
 <img src="img/imagen 2.png" alt="Página de extensiones del navegador de Bitwarden mostrando opciones como Chrome, Edge y Firefox">
   
-3. Descarga e instala la aplicación.
+3. Descargar e instalar la aplicación
 
 <img src="img/imagen 3.png" alt="Página de descarga de Bitwarden para Windows con enlaces de instalación y logotipo de Windows">
 
 <img src="img/imagen 4.png" alt="Instalador de Bitwarden en proceso de descarga e instalación en Windows"> 
 
-4. Crea una cuenta con una **contraseña segura** (mínimo 16 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos).
+4. Create una cuenta con una contraseña segura.
+( Recomendación: contraseña con 16 caracteres, mayúsculas, minúsculas, números y símbolos.)
 
 <img src="img/imagen 5.png" alt="Pantalla de inicio de Bitwarden con opción para crear una nueva cuenta">
 
@@ -41,7 +42,7 @@
 
 <img src="img/imagen 7.png" alt="Formulario para establecer una contraseña maestra segura en Bitwarden">
 
-5. Activa la **autenticación de dos factores (2FA)** para mayor seguridad
+5. Ara habilitamos autenticación de dos factores (2FA) para mejor proteccion de la cuenta
 
 <img src="img/imagen 8.png" alt="Menú superior de Bitwarden mostrando opciones de cuenta y configuración para 2FA">
 
@@ -54,12 +55,16 @@ Y ponemos una de las tres opciones.
 
 ## 2. Generación de Contraseñas Seguras
 
-1. En Bitwarden, abre el **Generador de contraseñas** (`+` → *Inici de sessió*).
+1. Abrir Bitwarden → Generador de contraseñas.
+Para crear una nueva contraseña hay que darle al boton +
    
 <img src="img/imagen 10.png" alt="Vista del panel principal de Bitwarden mostrando la caja fuerte con los elementos guardados como cuentas de GitHub y Gmail.">
+En este caso inicio de session
 <img src="img/imagen 11.png" alt="Detalle de una entrada guardada en Bitwarden correspondiente a la cuenta de GitHub, con nombre de usuario, contraseña y opciones adicionales.">
 
-2. Completa los parámetros:  
+Y ya te dejararia crear una contraseña y poner el nombre de usuario.
+
+Ahora completa los parámetros:  
 
 <img src="img/imagen 12.png" alt="Detalle de una entrada en Bitwarden para la cuenta de Gmail, mostrando el nombre de usuario, la contraseña y la dirección web asociada.">
 
@@ -81,16 +86,24 @@ Bitwarden para poder usarla.
 
 ### 3.1 Correo Electrónico
 
-1. Clic en `+` → selecciona **Inicio de sesión (Login)**.
+1. Haz clic en el botón + para crear un nuevo ítem
 
 <img src="img/imagen 15.png" alt="Formulario completado en Bitwarden con un ejemplo de elemento de prueba que incluye nombre de usuario, contraseña y enlace web.">
+
+2. Selecciona el tipo: Inicio de sesión (Login).
+
 <img src="img/imagen 16.png" alt="Generador de contraseñas de Bitwarden mostrando una contraseña segura y las opciones configurables para su longitud y tipos de caracteres.">
 
-3. Completa los campos:
-   - **Nombre:** gmail  
-   - **Usuario:** tu dirección de correo  
-   - **Contraseña:** la del servicio  
-   - **URL:** [https://mail.google.com](https://mail.google.com)
+ahora completa con estos pasos: 
+
+1. Abre la página de inicio de sesión del servicio (por ejemplo
+https://mail.google.com).
+2. Haz clic en el icono de Bitwarden en la barra del navegador.
+3. Si la página coincide con la URI guardada, Bitwarden mostrará la credencial disponible.
+4. Selecciona la credencial y pulsa “Autocompletar” o el logo azul de escudo.
+5. Los campos de usuario y contraseña se rellenará automáticamente.
+6. Haz clic en “Iniciar sesión” para acceder.
+
 
  <img src="img/imagen 17.png" alt="Interfaz de Bitwarden mostrando un aviso para guardar tiempo con el autocompletado al añadir un nuevo inicio de sesión.">
 
@@ -100,28 +113,37 @@ Bitwarden para poder usarla.
 
 ### 3.2 Aplicaciones o Servicios Web
 
-1. Clic en `+` → tipo **Login**.  
-2. Ejemplo:  
-   - **Nombre:** GitHub  
-   - **Usuario:** tu usuario de GitHub  
-   - **Contraseña:** contraseña del servicio  
-   - **URL:** [https://github.com/login](https://github.com/login)  
+1. En Bitwarden, volvemos a seleccionar “Nuevo ítem” y elige el tipo Login.
+2. Sigue los pasos y completa los siguientes campos:
+- Nombre: escribe el nombre de la aplicación o servicio web que quieres guardar la
+contraseña, por ejemplo: GitHub.
+- Usuario: introduce tu nombre de usuario de la aplicación o web.
+-Contraseña: pon la contraseña de tu cuenta para poder iniciar sesión correctamente.
+- URI: agrega la dirección web de inicio de sesión, en este caso:
+https://github.com/login.
+- Opcionalmente, agrega una nota para avisarte que por ejemplo esta contraseña es para
+github.
+
 3. Guarda los datos para un acceso seguro y rápido.
  <img src="img/imagen 18.png" alt="Menú contextual de Bitwarden con opciones para añadir nuevos elementos como inicio de sesión, tarjeta, identidad, nota o clave SSH.">
 
 ### 3.3 Autocompletado en el Navegador
 
-**Requisitos:**
-- Tener instalada la extensión de Bitwarden (Chrome, Edge, Firefox).  
-- Iniciar sesión con la misma cuenta.
+Requisitos previos:
+- Tener instalada la extensión de Bitwarden en el navegador (Chrome, Edge o Firefox).
+-Haber iniciado sesión con la misma cuenta que usas en la aplicación.
 
-**Pasos:**
-1. Abre la página de inicio de sesión del servicio.  
-2. Haz clic en el icono de Bitwarden.  
-3. Selecciona la credencial guardada.  
-4. Pulsa **“Autocompletar”** → los campos se rellenan automáticamente.
-   
 <img src="img/imagen 19.png" alt="Parte inferior de la interfaz de Bitwarden mostrando los botones de acceso a la caja fuerte y la opción de enviar elementos.">
+
+**Pasos a seguir:**
+1. Abre la página de inicio de sesión del servicio (por ejemplo
+https://mail.google.com).
+2. Haz clic en el icono de Bitwarden en la barra del navegador.
+3. Si la página coincide con la URI guardada, Bitwarden mostrará la credencial disponible.
+4. Selecciona la credencial y pulsa “Autocompletar” o el logo azul de escudo.
+5. Los campos de usuario y contraseña se rellenará automáticamente.
+6. Haz clic en “Iniciar sesión” para acceder
+   
 <img src="img/imatge 20.png" alt="Ventana de guardado del archivo de exportación de Bitwarden mostrando la ubicación en la carpeta Downloads y el formato JSON.">
 
 ---
@@ -136,19 +158,15 @@ Bitwarden para poder usarla.
 <img src="img/imagen 22.png" alt="Menú principal de Bitwarden desplegado bajo la opción Fitxer, mostrando acciones como sincronizar, importar o exportar la caja fuerte.">
 <img src="img/imagen 23.png" alt="Pantalla de inicio de sesión de Google donde Bitwarden sugiere automáticamente la cuenta guardada para completar la contraseña.">
 
-**Recomendaciones:**
-- Cifra la copia con herramientas como **7-Zip** o **VeraCrypt**.  
-- Guarda una copia en una **memoria USB cifrada** y protégela físicamente.  
-- Mantén otra copia en la nube, **cifrada y protegida con 2FA**.
-
----
-
 ## 5. Recomendaciones Finales
 
-- Usa contraseñas largas y únicas.  
-- Habilita siempre **2FA**.  
-- No compartas tu contraseña maestra.  
-- Realiza copias de seguridad cifradas periódicamente.
+La mejor práctica es cifrar la copia de seguridad antes de guardarla, usando una contraseña
+fuerte o una herramienta como 7-Zip o VeraCrypt.
+Se recomienda guardar una copia en una memoria USB cifrada y conservarla en un lugar
+físico seguro (como una caja fuerte).
+Opcionalmente, puedes mantener una segunda copia en la nube, siempre que esté cifrada
+y protegida con autenticación en dos pasos (2FA).
+
 
 
   [Tornar pàgina del projecte](../README.md)
