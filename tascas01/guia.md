@@ -73,8 +73,8 @@ Le damos a utilizar esta contraseña y le damos a guardar y se te guardaran los 
 <img src="img/imagen 14.png" alt="Menú desplegable de Bitwarden con opciones para crear diferentes tipos de elementos como inicio de sesión, tarjeta, identidad, nota o clave SSH.">
 
 Consejo: Usa siempre contraseñas de al menos 20 caracteres, mezclando diferentes tipos de símbolos y letras.
-Finalmente tendrias que copiar la contraseña generada y guardarla en la base de datos de
-Bitwarden para poder usarla.
+
+Finalmente tendrias que copiar la contraseña generada y guardarla en la base de datos de Bitwarden para poder usarla.
 
 ---
 
@@ -95,13 +95,12 @@ Bitwarden para poder usarla.
 - Nombre de usuario: introduce tu dirección de correo, en mi caso
 (alu.david.ballesteros@mataro.epiaedu.cat).
 -Contraseña: pon la contraseña de tu gmail para poder iniciar sesión correctamente.
-url : añade la dirección del servicio, en este caso: https://mail.google.com.
+- url : añade la dirección del servicio, en este caso: https://mail.google.com.
 Opcionalmente, agrega notas o asigna la credencial a una carpeta llamada “Correo”.
 Pulsa “Guardar”. Y la contraseña quedará almacenada de forma cifrada dentro del cofre de
 Bitwarden.
 
  <img src="img/imagen 17.png" alt="Interfaz de Bitwarden mostrando un aviso para guardar tiempo con el autocompletado al añadir un nuevo inicio de sesión.">
-
 
 4. Guarda la credencial dentro del **cofre cifrado** de Bitwarden.
 
@@ -109,14 +108,11 @@ Bitwarden.
 
 1. En Bitwarden, volvemos a seleccionar “Nuevo ítem” y elige el tipo Login.
 2. Sigue los pasos y completa los siguientes campos:
-- Nombre: escribe el nombre de la aplicación o servicio web que quieres guardar la
-contraseña, por ejemplo: GitHub.
+- Nombre: escribe el nombre de la aplicación o servicio web que quieres guardar la contraseña, por ejemplo: GitHub.
 - Usuario: introduce tu nombre de usuario de la aplicación o web.
 -Contraseña: pon la contraseña de tu cuenta para poder iniciar sesión correctamente.
-- URI: agrega la dirección web de inicio de sesión, en este caso:
-https://github.com/login.
-- Opcionalmente, agrega una nota para avisarte que por ejemplo esta contraseña es para
-github.
+- URI: agrega la dirección web de inicio de sesión, en este caso: https://github.com/login.
+- Opcionalmente, agrega una nota para avisarte que por ejemplo esta contraseña es para github.
 
 3. Guarda los datos para un acceso seguro y rápido.
  <img src="img/imagen 18.png" alt="Menú contextual de Bitwarden con opciones para añadir nuevos elementos como inicio de sesión, tarjeta, identidad, nota o clave SSH.">
@@ -154,12 +150,9 @@ https://mail.google.com).
 
 ## 5. Recomendaciones Finales
 
-La mejor práctica es cifrar la copia de seguridad antes de guardarla, usando una contraseña
-fuerte o una herramienta como 7-Zip o VeraCrypt.
-Se recomienda guardar una copia en una memoria USB cifrada y conservarla en un lugar
-físico seguro (como una caja fuerte).
-Opcionalmente, puedes mantener una segunda copia en la nube, siempre que esté cifrada
-y protegida con autenticación en dos pasos (2FA).
+La mejor práctica es cifrar la copia de seguridad antes de guardarla, usando una contraseña fuerte o una herramienta como 7-Zip o VeraCrypt.
+Se recomienda guardar una copia en una memoria USB cifrada y conservarla en un lugar físico seguro (como una caja fuerte).
+Opcionalmente, puedes mantener una segunda copia en la nube, siempre que esté cifrada y protegida con autenticación en dos pasos (2FA).
 
 
 
