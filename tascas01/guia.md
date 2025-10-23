@@ -71,9 +71,7 @@ Le damos a guardar y se te guardaran los datos que has puesto anteriormente.
 
 <img src="img/imagen 14.png" alt="Menú desplegable de Bitwarden con opciones para crear diferentes tipos de elementos como inicio de sesión, tarjeta, identidad, nota o clave SSH.">
 
-Esta es una prueba y la contraseña no es muy segura mi recomendación es usar una
-contraseña de 20 caracteres, incluir mayúsculas, minúsculas, números y símbolos para
-garantir una contraseña segura.
+Consejo: Usa siempre contraseñas de al menos 20 caracteres, mezclando diferentes tipos de símbolos y letras.
 Finalmente tendrias que copiar la contraseña generada y guardarla en la base de datos de
 Bitwarden para poder usarla.
 
