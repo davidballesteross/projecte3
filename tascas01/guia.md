@@ -76,5 +76,5 @@ Para el personal técnico de **EverPia**, se recomienda **Bitwarden**:
 - Minimiza errores humanos en la gestión de contraseñas.  
 - Ofrece equilibrio entre **seguridad, usabilidad y continuidad del negocio**.
 
-  [Tornar pàgina projecte](../README.md)
+  [Tornar pàgina del projecte](../README.md)
 
