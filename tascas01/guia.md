@@ -90,15 +90,16 @@ Bitwarden para poder usarla.
 
 <img src="img/imagen 16.png" alt="Generador de contraseñas de Bitwarden mostrando una contraseña segura y las opciones configurables para su longitud y tipos de caracteres.">
 
-ahora completa con estos pasos: 
+3. Completa los siguientes campos:
+- Nombre: escribe un nombre descriptivo, por ejemplo “gmail”.
+- Nombre de usuario: introduce tu dirección de correo, en mi caso
+(alu.david.ballesteros@mataro.epiaedu.cat).
+-Contraseña: pon la contraseña de tu gmail para poder iniciar sesión correctamente.
+url : añade la dirección del servicio, en este caso: https://mail.google.com.
+Opcionalmente, agrega notas o asigna la credencial a una carpeta llamada “Correo”.
+Pulsa “Guardar”. Y la contraseña quedará almacenada de forma cifrada dentro del cofre de
+Bitwarden.
 
-1. Abre la página de inicio de sesión del servicio (por ejemplo
-https://mail.google.com).
-2. Haz clic en el icono de Bitwarden en la barra del navegador.
-3. Si la página coincide con la URI guardada, Bitwarden mostrará la credencial disponible.
-4. Selecciona la credencial y pulsa “Autocompletar” o el logo azul de escudo.
-5. Los campos de usuario y contraseña se rellenará automáticamente.
-6. Haz clic en “Iniciar sesión” para acceder.
 
 
  <img src="img/imagen 17.png" alt="Interfaz de Bitwarden mostrando un aviso para guardar tiempo con el autocompletado al añadir un nuevo inicio de sesión.">
