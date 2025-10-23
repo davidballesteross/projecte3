@@ -47,6 +47,8 @@
 
 <img src="img/imagen 9.png" alt="Página de seguridad de Bitwarden mostrando opciones de inicio de sesión en dos pasos y proveedores de autenticación">
 
+Y ponemos una de las tres opciones.
+
 
 ---
 
