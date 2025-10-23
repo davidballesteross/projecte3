@@ -20,7 +20,7 @@
 ## 1. Instalación y Configuración Inicial
 
 1. Visita la web oficial: [https://bitwarden.com](https://bitwarden.com).
-! [Búsqueda en Google del sitio oficial de Bitwarden](img/imagen 1.png) 
+<img src="img/imagen1.png" alt="Búsqueda en Google del sitio oficial de Bitwarden">
 3. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.  
 4. Descarga e instala la aplicación.  
 5. Crea una cuenta con una **contraseña segura** (mínimo 16 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos).  
