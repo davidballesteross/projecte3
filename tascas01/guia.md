@@ -59,8 +59,9 @@ Y ponemos una de las tres opciones.
 <img src="img/imagen 10.png" alt="Vista del panel principal de Bitwarden mostrando la caja fuerte con los elementos guardados como cuentas de GitHub y Gmail.">
 <img src="img/imagen 11.png" alt="Detalle de una entrada guardada en Bitwarden correspondiente a la cuenta de GitHub, con nombre de usuario, contraseña y opciones adicionales.">
 3. Configura los parámetros:  
-   - Longitud: 14–20 caracteres.  
-   - Incluir letras mayúsculas, minúsculas, números y símbolos.  
+
+<img src="img/imagen 12.png" alt="Detalle de una entrada en Bitwarden para la cuenta de Gmail, mostrando el nombre de usuario, la contraseña y la dirección web asociada.">
+
 4. Haz clic en **“Utilizar esta contraseña”** y guarda los cambios.  
 5. Se recomienda usar **mínimo 20 caracteres** para mayor seguridad.  
 
