@@ -42,7 +42,7 @@
 
 <img src="img/imagen 7.png" alt="Formulario para establecer una contraseña maestra segura en Bitwarden">
 
-5. Ara habilitamos autenticación de dos factores (2FA) para mejor proteccion de la cuenta
+5. Ahora habilitamos autenticación de dos factores (2FA) para mejor proteccion de la cuenta
 
 <img src="img/imagen 8.png" alt="Menú superior de Bitwarden mostrando opciones de cuenta y configuración para 2FA">
 
