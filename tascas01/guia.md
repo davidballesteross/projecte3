@@ -41,7 +41,13 @@
 
 <img src="img/imagen 7.png" alt="Formulario para establecer una contraseña maestra segura en Bitwarden">
 
-8. Activa la **autenticación de dos factores (2FA)** para mayor seguridad
+5. Activa la **autenticación de dos factores (2FA)** para mayor seguridad
+
+<img src="img/imagen 8.png" alt="Menú superior de Bitwarden mostrando opciones de cuenta y configuración para 2FA">
+
+<img src="img/imagen 9.png" alt="Página de seguridad de Bitwarden mostrando opciones de inicio de sesión en dos pasos y proveedores de autenticación">
+
+
 ---
 
 ## 2. Generación de Contraseñas Seguras
