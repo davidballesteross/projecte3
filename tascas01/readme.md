@@ -36,4 +36,4 @@ Podeu consultar tots els documents fent clic al document corresponent:
 - Al arxiu [informe](informe.md) podeu trobar l'informe.
 - Al arxiu [guia](guia.md) podeu trobar la guia.
 
-[Tornar pàgina projecte](../README.md)
+[Tornar pàgina del projecte](../README.md)
