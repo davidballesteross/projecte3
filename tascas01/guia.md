@@ -59,15 +59,23 @@ Y ponemos una de las tres opciones.
 <img src="img/imagen 10.png" alt="Vista del panel principal de Bitwarden mostrando la caja fuerte con los elementos guardados como cuentas de GitHub y Gmail.">
 <img src="img/imagen 11.png" alt="Detalle de una entrada guardada en Bitwarden correspondiente a la cuenta de GitHub, con nombre de usuario, contraseña y opciones adicionales.">
 
-2. Configura los parámetros:  
+2. Completa los parámetros:  
 
 <img src="img/imagen 12.png" alt="Detalle de una entrada en Bitwarden para la cuenta de Gmail, mostrando el nombre de usuario, la contraseña y la dirección web asociada.">
 
 3. Haz clic en **“Generar una contraseña”** la creas y guardas los cambios.
 
 <img src="img/imagen 13.png" alt="Formulario de creación de un nuevo elemento en Bitwarden donde se pueden introducir usuario, contraseña, sitio web y notas adicionales.">
+Le damos a utilizar esta contraseña
+Le damos a guardar y se te guardaran los datos que has puesto anteriormente.
 
-4. Se recomienda usar **mínimo 20 caracteres** para mayor seguridad.  
+<img src="img/imagen 14.png" alt="Menú desplegable de Bitwarden con opciones para crear diferentes tipos de elementos como inicio de sesión, tarjeta, identidad, nota o clave SSH.">
+
+Esta es una prueba y la contraseña no es muy segura mi recomendación es usar una
+contraseña de 20 caracteres, incluir mayúsculas, minúsculas, números y símbolos para
+garantir una contraseña segura.
+Finalmente tendrias que copiar la contraseña generada y guardarla en la base de datos de
+Bitwarden para poder usarla.
 
 ---
 
