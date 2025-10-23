@@ -19,7 +19,7 @@
 
 ## 1. Instalación y Configuración Inicial
 
-1. Visita la web oficial: [https://bitwarden.com](https://bitwarden.com).
+1. Abrir la página oficial: [https://bitwarden.com](https://bitwarden.com).
 
 <img src="img/imagen 1.png" alt="Búsqueda en Google del sitio oficial de Bitwarden">
 
