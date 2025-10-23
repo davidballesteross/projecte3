@@ -9,60 +9,64 @@
 ---
 
 ## Índice
-1. [Instalación y Configuración Inicial](#1-instalación-y-configuración-inicial)
-2. [Generación de Contraseñas Seguras](#2-generación-de-contraseñas-seguras)
-3. [Guardar y Usar Credenciales](#3-guardar-y-usar-credenciales)
-4. [Copias de Seguridad (Backup)](#4-copias-de-seguridad-backup)
-5. [Recomendaciones Finales](#5-recomendaciones-finales)
+1. Instalación y Configuración Inicial  
+2. Generación de Contraseñas Seguras  
+3. Guardar y Usar Credenciales  
+4. Copias de Seguridad (Backup)  
+5. Pequeñas recomendaciones  
 
 ---
 
 ## 1. Instalación y Configuración Inicial
 
-1. Visita la web oficial: [https://bitwarden.com](https://bitwarden.com).
+1. Abrir la página oficial: [https://bitwarden.com](https://bitwarden.com)
 
 <img src="img/imagen 1.png" alt="Búsqueda en Google del sitio oficial de Bitwarden">
 
-2. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.
+2. Seleccionar la versión adecuada: escritorio, móvil o extensión navegador.  
 
 <img src="img/imagen 2.png" alt="Página de extensiones del navegador de Bitwarden mostrando opciones como Chrome, Edge y Firefox">
-  
-3. Descarga e instala la aplicación.
+
+3. Descargar e instalar la aplicación.  
 
 <img src="img/imagen 3.png" alt="Página de descarga de Bitwarden para Windows con enlaces de instalación y logotipo de Windows">
 
-<img src="img/imagen 4.png" alt="Instalador de Bitwarden en proceso de descarga e instalación en Windows"> 
+4. Crear una cuenta con una contraseña segura.  
+   *(Recomendación: contraseña con 16 caracteres, mayúsculas, minúsculas, números y símbolos.)*
 
-4. Crea una cuenta con una **contraseña segura** (mínimo 16 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos).
-
-<img src="img/imagen 5.png" alt="Pantalla de inicio de Bitwarden con opción para crear una nueva cuenta">
-
-<img src="img/imagen 6.png" alt="Formulario de creación de cuenta en Bitwarden con campos de correo electrónico y nombre">
-
+<img src="img/imagen 4.png" alt="Instalador de Bitwarden en proceso de descarga e instalación en Windows">  
+<img src="img/imagen 5.png" alt="Pantalla de inicio de Bitwarden con opción para crear una nueva cuenta">  
+<img src="img/imagen 6.png" alt="Formulario de creación de cuenta en Bitwarden con campos de correo electrónico y nombre">  
 <img src="img/imagen 7.png" alt="Formulario para establecer una contraseña maestra segura en Bitwarden">
 
-5. Activa la **autenticación de dos factores (2FA)** para mayor seguridad
+Ara habilitamos autenticación de dos factores (2FA) para mejor protección de la cuenta.  
+Y ponemos una de las tres opciones.
 
-<img src="img/imagen 8.png" alt="Menú superior de Bitwarden mostrando opciones de cuenta y configuración para 2FA">
-
+<img src="img/imagen 8.png" alt="Menú superior de Bitwarden mostrando opciones de cuenta y configuración">  
 <img src="img/imagen 9.png" alt="Página de seguridad de Bitwarden mostrando opciones de inicio de sesión en dos pasos y proveedores de autenticación">
-
 
 ---
 
 ## 2. Generación de Contraseñas Seguras
 
-1. En Bitwarden, abre el **Generador de contraseñas** (`+` → *Inici de sessió*).
+1. Abrir Bitwarden → Generador de contraseñas.  
+   Para crear una nueva contraseña hay que darle al botón **+**.  
+   En este caso, inicio de sesión.  
+   Y ya te dejaría crear una contraseña y poner el nombre de usuario.
 
-<img src="img/imagen 10.png" alt="Menú principal de Bitwarden con el botón para añadir nuevos ítems a la caja fuerte">
+<img src="img/imagen 10.png" alt="Menú principal de Bitwarden con el botón para añadir nuevos ítems a la caja fuerte">  
+<img src="img/imagen 11.png" alt="Generador de contraseñas de Bitwarden mostrando una contraseña segura y opciones de longitud y caracteres">  
+<img src="img/imagen 12.png" alt="Formulario de creación de nuevo elemento en Bitwarden con campos de usuario, contraseña y URI">
 
-<img src="img/imagen 11.png" alt="Generador de contraseñas de Bitwarden mostrando una contraseña segura y opciones de longitud y caracteres">
+Le damos a utilizar esta contraseña.  
+Le damos a guardar y se te guardarán los datos que has puesto anteriormente.
 
-3. Configura los parámetros:  
-   - Longitud: 14–20 caracteres.  
-   - Incluir letras mayúsculas, minúsculas, números y símbolos.  
-4. Haz clic en **“Utilizar esta contraseña”** y guarda los cambios.  
-5. Se recomienda usar **mínimo 20 caracteres** para mayor seguridad.  
+<img src="img/imagen 13.png" alt="Menú de Bitwarden para añadir nuevos ítems como inicio de sesión, tarjeta, identidad o nota">  
+<img src="img/imagen 14.png" alt="Formulario completado en Bitwarden con nombre de elemento, contraseña generada y enlace del sitio web">
+
+Esta es una prueba y la contraseña no es muy segura.  
+Mi recomendación es usar una contraseña de **20 caracteres**, incluir mayúsculas, minúsculas, números y símbolos para garantizar una contraseña segura.  
+Finalmente tendrías que copiar la contraseña generada y guardarla en la base de datos de Bitwarden para poder usarla.
 
 ---
 
@@ -70,57 +74,9 @@
 
 ### 3.1 Correo Electrónico
 
-1. Clic en `+` → selecciona **Inicio de sesión (Login)**.  
-2. Completa los campos:
-   - **Nombre:** gmail  
-   - **Usuario:** tu dirección de correo  
-   - **Contraseña:** la del servicio  
-   - **URL:** [https://mail.google.com](https://mail.google.com)  
-3. Guarda la credencial dentro del **cofre cifrado** de Bitwarden.
+1. Haz clic en el botón **+** para crear un nuevo ítem.  
+2. Selecciona el tipo:
 
-### 3.2 Aplicaciones o Servicios Web
-
-1. Clic en `+` → tipo **Login**.  
-2. Ejemplo:  
-   - **Nombre:** GitHub  
-   - **Usuario:** tu usuario de GitHub  
-   - **Contraseña:** contraseña del servicio  
-   - **URL:** [https://github.com/login](https://github.com/login)  
-3. Guarda los datos para un acceso seguro y rápido.
-
-### 3.3 Autocompletado en el Navegador
-
-**Requisitos:**
-- Tener instalada la extensión de Bitwarden (Chrome, Edge, Firefox).  
-- Iniciar sesión con la misma cuenta.
-
-**Pasos:**
-1. Abre la página de inicio de sesión del servicio.  
-2. Haz clic en el icono de Bitwarden.  
-3. Selecciona la credencial guardada.  
-4. Pulsa **“Autocompletar”** → los campos se rellenan automáticamente.  
-
----
-
-## 4. Copias de Seguridad (Backup)
-
-1. En Bitwarden, abre **Fitxer → Exportar caja fuerte**.  
-2. Introduce la **contraseña maestra**.  
-3. Guarda el archivo **cifrado** en tu dispositivo.
-
-**Recomendaciones:**
-- Cifra la copia con herramientas como **7-Zip** o **VeraCrypt**.  
-- Guarda una copia en una **memoria USB cifrada** y protégela físicamente.  
-- Mantén otra copia en la nube, **cifrada y protegida con 2FA**.
-
----
-
-## 5. Recomendaciones Finales
-
-- Usa contraseñas largas y únicas.  
-- Habilita siempre **2FA**.  
-- No compartas tu contraseña maestra.  
-- Realiza copias de seguridad cifradas periódicamente.
 
 
   [Tornar pàgina del projecte](../README.md)
