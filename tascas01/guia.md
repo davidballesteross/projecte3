@@ -61,8 +61,6 @@ Y ponemos una de las tres opciones.
 En este caso inicio de session
 <img src="img/imagen 11.png" alt="Detalle de una entrada guardada en Bitwarden correspondiente a la cuenta de GitHub, con nombre de usuario, contraseña y opciones adicionales.">
 
-Y ya te dejararia crear una contraseña y poner el nombre de usuario.
-
 Ahora completa los parámetros:  
 
 <img src="img/imagen 12.png" alt="Detalle de una entrada en Bitwarden para la cuenta de Gmail, mostrando el nombre de usuario, la contraseña y la dirección web asociada.">
