@@ -95,7 +95,7 @@ Finalmente tendrias que copiar la contraseña generada y guardarla en la base de
   
 - Nombre de usuario: introduce tu dirección de correo, en mi caso: (alu.david.ballesteros@mataro.epiaedu.cat).
   
--Contraseña: pon la contraseña de tu gmail para poder iniciar sesión correctamente.
+- Contraseña: pon la contraseña de tu gmail para poder iniciar sesión correctamente.
 
 - url : añade la dirección del servicio, en este caso: https://mail.google.com.
   
