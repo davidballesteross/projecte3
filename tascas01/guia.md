@@ -24,9 +24,7 @@
 3. Descarga e instala la aplicación.  
 4. Crea una cuenta con una **contraseña segura** (mínimo 16 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos).  
 5. Activa la **autenticación de dos factores (2FA)** para mayor seguridad, mediante:
-   - Aplicación TOTP  
-   - Clave de seguridad física  
-   - Frase de emergencia digital  
+    
 
 ---
 
