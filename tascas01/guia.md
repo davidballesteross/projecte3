@@ -111,11 +111,12 @@ Bitwarden.
 ### 3.2 Aplicaciones o Servicios Web
 
 1. En Bitwarden, volvemos a seleccionar “Nuevo ítem” y elige el tipo Login.
+   
 2. Sigue los pasos y completa los siguientes campos:
 - Nombre: escribe el nombre de la aplicación o servicio web que quieres guardar la contraseña, por ejemplo: GitHub.
 - Usuario: introduce tu nombre de usuario de la aplicación o web.
 -Contraseña: pon la contraseña de tu cuenta para poder iniciar sesión correctamente.
-- URI: agrega la dirección web de inicio de sesión, en este caso: https://github.com/login.
+- URL: agrega la dirección web de inicio de sesión, en este caso: https://github.com/login.
 - Opcionalmente, agrega una nota para avisarte que por ejemplo esta contraseña es para github.
 
 3. Guarda los datos para un acceso seguro y rápido.
@@ -124,7 +125,9 @@ Bitwarden.
 ### 3.3 Autocompletado en el Navegador
 
 Requisitos previos:
+
 - Tener instalada la extensión de Bitwarden en el navegador (Chrome, Edge o Firefox).
+  
 -Haber iniciado sesión con la misma cuenta que usas en la aplicación.
 
 <img src="img/imagen 19.png" alt="Parte inferior de la interfaz de Bitwarden mostrando los botones de acceso a la caja fuerte y la opción de enviar elementos.">
@@ -160,4 +163,4 @@ Opcionalmente, puedes mantener una segunda copia en la nube, siempre que esté c
 
 
 
-  [Tornar pàgina del projecte](../README.md)
+[Tornar pàgina del projecte](../README.md)
