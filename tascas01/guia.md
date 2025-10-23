@@ -26,11 +26,14 @@
 <img src="img/imagen 1.png" alt="Búsqueda en Google del sitio oficial de Bitwarden">  
 <img src="img/imagen 2.png" alt="Página de extensiones del navegador de Bitwarden mostrando opciones como Chrome, Edge y Firefox">  
 <img src="img/imagen 3.png" alt="Página de descarga de Bitwarden para Windows con enlaces de instalación y logotipo de Windows">  
-
-4. Crear una cuenta con una contraseña segura.  
+  
 (Recomendación: contraseña con 16 caracteres, mayúsculas, minúsculas, números y símbolos.)
 
 <img src="img/imagen 4.png" alt="Instalador de Bitwarden en proceso de descarga e instalación en Windows">  
+
+4. Crear una cuenta con una contraseña segura.
+   
+(Recomendación: contraseña con 16 caracteres, mayúsculas, minúsculas, números y símbolos.)
 <img src="img/imagen 5.png" alt="Pantalla de inicio de Bitwarden con opción para crear una nueva cuenta">  
 <img src="img/imagen 6.png" alt="Formulario de creación de cuenta en Bitwarden con campos de correo electrónico y nombre">  
 
