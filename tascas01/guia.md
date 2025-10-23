@@ -68,8 +68,7 @@ Ahora completa los parámetros:
 3. Haz clic en **“Generar una contraseña”** la creas y guardas los cambios.
 
 <img src="img/imagen 13.png" alt="Formulario de creación de un nuevo elemento en Bitwarden donde se pueden introducir usuario, contraseña, sitio web y notas adicionales.">
-Le damos a utilizar esta contraseña
-Le damos a guardar y se te guardaran los datos que has puesto anteriormente.
+Le damos a utilizar esta contraseña y le damos a guardar y se te guardaran los datos que has puesto anteriormente.
 
 <img src="img/imagen 14.png" alt="Menú desplegable de Bitwarden con opciones para crear diferentes tipos de elementos como inicio de sesión, tarjeta, identidad, nota o clave SSH.">
 
