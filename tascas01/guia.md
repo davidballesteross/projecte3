@@ -55,8 +55,7 @@ Y ponemos una de las tres opciones.
 
 ## 2. Generación de Contraseñas Seguras
 
-1. Abrir Bitwarden → Generador de contraseñas.
-Para crear una nueva contraseña hay que darle al boton +
+1. Para crear una nueva contraseña hay que darle al boton +
    
 <img src="img/imagen 10.png" alt="Vista del panel principal de Bitwarden mostrando la caja fuerte con los elementos guardados como cuentas de GitHub y Gmail.">
 En este caso inicio de session
