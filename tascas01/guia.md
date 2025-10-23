@@ -128,7 +128,7 @@ Requisitos previos:
 
 - Tener instalada la extensión de Bitwarden en el navegador (Chrome, Edge o Firefox).
   
--Haber iniciado sesión con la misma cuenta que usas en la aplicación.
+- Haber iniciado sesión con la misma cuenta que usas en la aplicación.
 
 <img src="img/imagen 19.png" alt="Parte inferior de la interfaz de Bitwarden mostrando los botones de acceso a la caja fuerte y la opción de enviar elementos.">
 
