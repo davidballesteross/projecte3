@@ -1,4 +1,4 @@
-# GUIA T01: Gestor de contraseñas
+# Guía de Uso de Bitwarden
 
 **Autor:** David Ballesteros Antich  
 **Curso:** 2B  
@@ -9,72 +9,94 @@
 ---
 
 ## Índice
-1. [Introducción y Justificación](#1-introducción-y-justificación)
-2. [Comparativa Técnica](#2-comparativa-técnica)
-3. [Ventajas e Inconvenientes](#3-ventajas-e-inconvenientes)
-4. [Recomendación](#4-recomendación)
+1. [Instalación y Configuración Inicial](#1-instalación-y-configuración-inicial)
+2. [Generación de Contraseñas Seguras](#2-generación-de-contraseñas-seguras)
+3. [Guardar y Usar Credenciales](#3-guardar-y-usar-credenciales)
+4. [Copias de Seguridad (Backup)](#4-copias-de-seguridad-backup)
+5. [Recomendaciones Finales](#5-recomendaciones-finales)
 
 ---
 
-## 1. Introducción y Justificación
+## 1. Instalación y Configuración Inicial
 
-Las contraseñas débiles o reutilizadas representan un riesgo crítico para la seguridad:
-
-- **Ataques de diccionario:** los ciberdelincuentes prueban contraseñas comunes.  
-- **Credential stuffing:** el uso repetido de la misma contraseña facilita el robo masivo de datos.
-
-Un **gestor de contraseñas** permite:
-
-- Generar contraseñas fuertes y únicas.  
-- Almacenarlas cifradas de forma segura (end-to-end).  
-- Acceder a ellas desde múltiples dispositivos sin necesidad de recordarlas.
+1. Visita la web oficial: [https://bitwarden.com](https://bitwarden.com).  
+2. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.  
+3. Descarga e instala la aplicación.  
+4. Crea una cuenta con una **contraseña segura** (mínimo 16 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos).  
+5. Activa la **autenticación de dos factores (2FA)** para mayor seguridad, mediante:
+   - Aplicación TOTP  
+   - Clave de seguridad física  
+   - Frase de emergencia digital  
 
 ---
 
-## 2. Comparativa Técnica
+## 2. Generación de Contraseñas Seguras
 
-| Característica              | Bitwarden (Online / Nube)                              | KeePassXC (Offline / Escritorio)                     |
-|-----------------------------|----------------------------------------------------------|------------------------------------------------------|
-| **Sincronización**          | Automática entre dispositivos vía nube                  | Manual mediante archivo `.kdbx`                      |
-| **Modelo de seguridad**     | Cifrado AES-256 end-to-end, *zero-knowledge*            | Cifrado local AES-256 o ChaCha20, open source        |
-| **Acceso multi-dispositivo**| Sí (escritorio, móvil, extensión navegador)              | Sí, pero requiere transferir archivo manualmente     |
-| **Costo / Modelo**          | Gratis (freemium) + premium opcional                    | 100% gratuito y open source                          |
-| **Portabilidad**            | Alta (desde cualquier dispositivo con Internet)         | Depende del archivo `.kdbx`                          |
-| **Dependencia de la nube**  | Sí                                                       | No, todo local                                       |
+1. En Bitwarden, abre el **Generador de contraseñas** (`+` → *Inici de sessió*).  
+2. Configura los parámetros:  
+   - Longitud: 14–20 caracteres.  
+   - Incluir letras mayúsculas, minúsculas, números y símbolos.  
+3. Haz clic en **“Utilizar esta contraseña”** y guarda los cambios.  
+4. Se recomienda usar **mínimo 20 caracteres** para mayor seguridad.  
 
 ---
 
-## 3. Ventajas e Inconvenientes
+## 3. Guardar y Usar Credenciales
 
-### Bitwarden (Online)
-**Pros:**
-- Sincronización automática y acceso fácil desde cualquier dispositivo.  
-- Cifrado validado y auditado.  
-- Interfaz intuitiva y sencilla.
+### 3.1 Correo Electrónico
 
-**Contras:**
-- Dependencia de Internet.  
-- Riesgo potencial de ataques online.
+1. Clic en `+` → selecciona **Inicio de sesión (Login)**.  
+2. Completa los campos:
+   - **Nombre:** gmail  
+   - **Usuario:** tu dirección de correo  
+   - **Contraseña:** la del servicio  
+   - **URL:** [https://mail.google.com](https://mail.google.com)  
+3. Guarda la credencial dentro del **cofre cifrado** de Bitwarden.
 
-### KeePassXC (Offline)
-**Pros:**
-- Independencia total de la nube.  
-- Control completo del archivo de contraseñas.  
-- Código abierto y auditable.
+### 3.2 Aplicaciones o Servicios Web
 
-**Contras:**
-- Sincronización manual.  
-- Menor comodidad para múltiples dispositivos.
+1. Clic en `+` → tipo **Login**.  
+2. Ejemplo:  
+   - **Nombre:** GitHub  
+   - **Usuario:** tu usuario de GitHub  
+   - **Contraseña:** contraseña del servicio  
+   - **URL:** [https://github.com/login](https://github.com/login)  
+3. Guarda los datos para un acceso seguro y rápido.
+
+### 3.3 Autocompletado en el Navegador
+
+**Requisitos:**
+- Tener instalada la extensión de Bitwarden (Chrome, Edge, Firefox).  
+- Iniciar sesión con la misma cuenta.
+
+**Pasos:**
+1. Abre la página de inicio de sesión del servicio.  
+2. Haz clic en el icono de Bitwarden.  
+3. Selecciona la credencial guardada.  
+4. Pulsa **“Autocompletar”** → los campos se rellenan automáticamente.  
 
 ---
 
-## 4. Recomendación
+## 4. Copias de Seguridad (Backup)
 
-Para el personal técnico de **EverPia**, se recomienda **Bitwarden**:
+1. En Bitwarden, abre **Fitxer → Exportar caja fuerte**.  
+2. Introduce la **contraseña maestra**.  
+3. Guarda el archivo **cifrado** en tu dispositivo.
 
-- Facilita la sincronización automática.  
-- Minimiza errores humanos en la gestión de contraseñas.  
-- Ofrece equilibrio entre **seguridad, usabilidad y continuidad del negocio**.
+**Recomendaciones:**
+- Cifra la copia con herramientas como **7-Zip** o **VeraCrypt**.  
+- Guarda una copia en una **memoria USB cifrada** y protégela físicamente.  
+- Mantén otra copia en la nube, **cifrada y protegida con 2FA**.
+
+---
+
+## 5. Recomendaciones Finales
+
+- Usa contraseñas largas y únicas.  
+- Habilita siempre **2FA**.  
+- No compartas tu contraseña maestra.  
+- Realiza copias de seguridad cifradas periódicamente.
+
 
   [Tornar pàgina del projecte](../README.md)
 
