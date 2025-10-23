@@ -37,8 +37,7 @@ y símbolos.)
   
 5. Ara habilitamos autenticación de dos factores (2FA) para mejor proteccion de la cuenta.
 
-
- Y ponemos una de las tres opciones.
+Y ponemos una de las tres opciones.
 
 
 ---
