@@ -19,11 +19,12 @@
 
 ## 1. Instalación y Configuración Inicial
 
-1. Visita la web oficial: [https://bitwarden.com](https://bitwarden.com).  
-2. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.  
-3. Descarga e instala la aplicación.  
-4. Crea una cuenta con una **contraseña segura** (mínimo 16 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos).  
-5. Activa la **autenticación de dos factores (2FA)** para mayor seguridad, mediante:
+1. Visita la web oficial: [https://bitwarden.com](https://bitwarden.com).
+![Búsqueda en Google del sitio oficial de Bitwarden](img/imagen1.png) 
+3. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.  
+4. Descarga e instala la aplicación.  
+5. Crea una cuenta con una **contraseña segura** (mínimo 16 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos).  
+6. Activa la **autenticación de dos factores (2FA)** para mayor seguridad, mediante:
    - Aplicación TOTP  
    - Clave de seguridad física  
    - Frase de emergencia digital  
