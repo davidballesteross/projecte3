@@ -23,25 +23,30 @@
 
 <img src="img/imagen 1.png" alt="Búsqueda en Google del sitio oficial de Bitwarden">
 
-2. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.
+2. Seleccionar la versión adecuada: escritorio, móvil o extensión navegador.
 
 <img src="img/imagen 2.png" alt="Página de extensiones del navegador de Bitwarden mostrando opciones como Chrome, Edge y Firefox">
   
-3. Descarga e instala la aplicación.
+3. Descargar e instalar la aplicación
 
 <img src="img/imagen 3.png" alt="Página de descarga de Bitwarden para Windows con enlaces de instalación y logotipo de Windows">
 
-7. Crea una cuenta con una **contraseña segura** (mínimo 16 caracteres, incluyendo mayúsculas, minúsculas, números y símbolos).  
-8. Activa la **autenticación de dos factores (2FA)** para mayor seguridad, mediante:
-   - Aplicación TOTP  
-   - Clave de seguridad física  
-   - Frase de emergencia digital  
+4. Create una cuenta con una contraseña segura.
+( Recomendación: contraseña con 16 caracteres, mayúsculas, minúsculas, números
+y símbolos.)
+  
+5. Ara habilitamos autenticación de dos factores (2FA) para mejor proteccion de la cuenta.
+
+
+Y ponemos una de las tres opciones.
+
 
 ---
 
 ## 2. Generación de Contraseñas Seguras
 
-1. En Bitwarden, abre el **Generador de contraseñas** (`+` → *Inici de sessió*).  
+1. Abrir Bitwarden → Generador de contraseñas.
+Para crear una nueva contraseña hay que darle al boton +  
 2. Configura los parámetros:  
    - Longitud: 14–20 caracteres.  
    - Incluir letras mayúsculas, minúsculas, números y símbolos.  
