@@ -23,11 +23,11 @@
 
 <img src="img/imagen 1.png" alt="Búsqueda en Google del sitio oficial de Bitwarden">
 
-3. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.
+2. Selecciona la versión según el dispositivo: **escritorio**, **móvil** o **extensión de navegador**.
 
 <img src="img/imagen 2.png" alt="Página de extensiones del navegador de Bitwarden mostrando opciones como Chrome, Edge y Firefox">
   
-5. Descarga e instala la aplicación.
+3. Descarga e instala la aplicación.
 
 <img src="img/imagen 3.png" alt="Página de descarga de Bitwarden para Windows con enlaces de instalación y logotipo de Windows">
 
