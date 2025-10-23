@@ -83,13 +83,22 @@ Bitwarden para poder usarla.
 
 ### 3.1 Correo Electrónico
 
-1. Clic en `+` → selecciona **Inicio de sesión (Login)**.  
-2. Completa los campos:
+1. Clic en `+` → selecciona **Inicio de sesión (Login)**.
+
+<img src="img/imagen 15.png" alt="Formulario completado en Bitwarden con un ejemplo de elemento de prueba que incluye nombre de usuario, contraseña y enlace web.">
+<img src="img/imagen 16.png" alt="Generador de contraseñas de Bitwarden mostrando una contraseña segura y las opciones configurables para su longitud y tipos de caracteres.">
+
+3. Completa los campos:
    - **Nombre:** gmail  
    - **Usuario:** tu dirección de correo  
    - **Contraseña:** la del servicio  
-   - **URL:** [https://mail.google.com](https://mail.google.com)  
-3. Guarda la credencial dentro del **cofre cifrado** de Bitwarden.
+   - **URL:** [https://mail.google.com](https://mail.google.com)
+
+ <img src="img/imagen 17.png" alt="Interfaz de Bitwarden mostrando un aviso para guardar tiempo con el autocompletado al añadir un nuevo inicio de sesión.">
+
+ 
+
+4. Guarda la credencial dentro del **cofre cifrado** de Bitwarden.
 
 ### 3.2 Aplicaciones o Servicios Web
 
@@ -100,6 +109,7 @@ Bitwarden para poder usarla.
    - **Contraseña:** contraseña del servicio  
    - **URL:** [https://github.com/login](https://github.com/login)  
 3. Guarda los datos para un acceso seguro y rápido.
+ <img src="img/imagen 18.png" alt="Menú contextual de Bitwarden con opciones para añadir nuevos elementos como inicio de sesión, tarjeta, identidad, nota o clave SSH.">
 
 ### 3.3 Autocompletado en el Navegador
 
@@ -111,7 +121,10 @@ Bitwarden para poder usarla.
 1. Abre la página de inicio de sesión del servicio.  
 2. Haz clic en el icono de Bitwarden.  
 3. Selecciona la credencial guardada.  
-4. Pulsa **“Autocompletar”** → los campos se rellenan automáticamente.  
+4. Pulsa **“Autocompletar”** → los campos se rellenan automáticamente.
+   
+<img src="img/imagen 19.png" alt="Parte inferior de la interfaz de Bitwarden mostrando los botones de acceso a la caja fuerte y la opción de enviar elementos.">
+<img src="img/imatge 20.png" alt="Ventana de guardado del archivo de exportación de Bitwarden mostrando la ubicación en la carpeta Downloads y el formato JSON.">
 
 ---
 
@@ -120,6 +133,10 @@ Bitwarden para poder usarla.
 1. En Bitwarden, abre **Fitxer → Exportar caja fuerte**.  
 2. Introduce la **contraseña maestra**.  
 3. Guarda el archivo **cifrado** en tu dispositivo.
+
+<img src="img/imatge 21.png" alt="Cuadro de confirmación de Bitwarden para exportar la caja fuerte solicitando la contraseña maestra antes de proceder.">
+<img src="img/imagen 22.png" alt="Menú principal de Bitwarden desplegado bajo la opción Fitxer, mostrando acciones como sincronizar, importar o exportar la caja fuerte.">
+<img src="img/imagen 23.png" alt="Pantalla de inicio de sesión de Google donde Bitwarden sugiere automáticamente la cuenta guardada para completar la contraseña.">
 
 **Recomendaciones:**
 - Cifra la copia con herramientas como **7-Zip** o **VeraCrypt**.  
