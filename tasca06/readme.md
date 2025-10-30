@@ -60,8 +60,8 @@ L’eina `nslookup` permet realitzar les mateixes proves des de qualsevol sistem
 Comprovació del funcionament de la **resolució local (mDNS)** entre equips d’una mateixa xarxa sense servidor de noms dedicat.
 
 **Activitat de la fase pràctica:**  
-Crear un document `guia.md` amb:
-- Les captures de les **6 comandes** indicades.  
+Crear un document `solució.md` amb:
+- Les captures de les **comandes** indicades.  
 - Les explicacions i anàlisis de cada resultat.  
 - Les proves de resolució local realitzades.
 
