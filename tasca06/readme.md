@@ -71,7 +71,7 @@ Crear un document `guia.md` amb:
 
 Dins la carpeta `tasca06` es troben els següents arxius:
 
-- `guia.md`: Document tècnic amb la descripció, configuració i anàlisi de totes les proves realitzades.  
+- `solució.md`: Document tècnic amb la descripció, configuració i anàlisi de totes les proves realitzades.  
 - Carpeta `img/`: Conté les captures de pantalla utilitzades al document guia.
 
 ---
@@ -79,7 +79,7 @@ Dins la carpeta `tasca06` es troben els següents arxius:
 ## Documents
 
 Podeu consultar tots els documents fent clic al document corresponent:  
-- A l’arxiu [guia](guia.md) podeu trobar la guia completa amb resultats i anàlisi de la pràctica.
+- A l’arxiu [solució](solució.md) podeu trobar la guia completa amb resultats i anàlisi de la pràctica.
 
 [Tornar pàgina del projecte](../README.md)
 
