@@ -90,9 +90,9 @@ I li assignem la IP **192.168.4.26/24**.
 
 <img src="img/8.png" alt="Configurant la IP a la màquina">
 
-[Tornar pàgina del projecte](../README.md)
-
 I ara li fem **ping a una altra màquina** per a comprovar que **funciona correctament la resolució local**.
 
 <img src="img/9.png" alt="Fent ping a una altra màquina">
+
+[Tornar pàgina del projecte](../README.md)
 
