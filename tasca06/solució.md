@@ -10,9 +10,9 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
 ---
 
-## 🔹 Diagnosi Avançada amb `dig` (Linux / macOS)
+## Diagnosi Avançada amb `dig` (Linux / macOS)
 
-### 🧭 Comanda 1: Consulta Bàsica de Registre A
+### Comanda 1: Consulta Bàsica de Registre A
 
 - **Executa dig xtec.cat A**
 
@@ -22,7 +22,7 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
   Observant la imatge, podem veure que la IP de resposta és **83.247.151.214** amb **valor TTL** de **3558 segons**. Sent el servidor que ha respost a la consulta el **127.0.0.53#53 UPD**.
 
-### 🧭 Comanda 2: Consulta de Servidors de Noms (NS)
+### Comanda 2: Consulta de Servidors de Noms (NS)
 
 - **Executa dig tecnocampus.cat NS**
 
@@ -36,7 +36,7 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
   - ns-535.awsdns-02.net.
   - ns-130.awsdns-16.com.
 
-### 🧭 Comanda 3: Consulta Detallada SOA
+### Comanda 3: Consulta Detallada SOA
 
 - **Executa dig escolapia.cat SOA**
 
@@ -46,7 +46,7 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
   La informació del **correu de l’administrador** és **root.dns1.nominalia.com** i el número de sèrie del domini és **1761028965**.
 
-### 🧭 Comanda 4: Consulta resolució inversa
+### Comanda 4: Consulta resolució inversa
 
 - **Executa comanda dig -x 147.83.2.135**
 
@@ -56,9 +56,9 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
   Mostra els registres associats a aquesta IP. Els registres indiquen noms de domini vinculats a l’adreça IP, com ara **barcelonatech-upc.eu, upc.edu, masters.upc.edu, upc.cat**, entre altres. Aquesta informació s’utilitza principalment per identificar servidors en consultes inverses DNS.
 
-## 🔹 B. Comprovació de Resolució amb nslookup (Multiplataforma)
+## Comprovació de Resolució amb nslookup (Multiplataforma)
 
-### 🧭 Comanda 1: Consulta Bàsica no Autoritativa
+### Comanda 1: Consulta Bàsica no Autoritativa
 
 - **Seleccionar type=A i com a domini de consulta tecnocampus.cat**
 
@@ -68,7 +68,7 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
   La resposta és **no autoritativa** perquè el servidor DNS que ha contestat (127.0.0.53), ha obtingut la informació d’un altre servidor, i com la resposta que ens dona és de segona mà, ens ho indica ficant que **no és autoritativa**.
 
-### 🧭 Comanda 2: Consultes autoritatives
+### Comanda 2: Consultes autoritatives
 
 - **Escriure server IP i escriure la IP del primer servidor de noms del domini tecnocampus.cat que s’ha obtingut d’una consulta anterior. A continuació, indiqueu que voleu consultar registres de tipus A i del domini tecnocampus.cat**
 
@@ -78,7 +78,7 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
   Doncs que en provindre d'un **servidor autoritatiu**, ja que **conté la informació del domini, no** ens apareix el **missatge de no autoritatiu**.
 
-## 🔹Resolucions locals
+## Resolucions locals
 
 **Finalment, es vol comprovar el funcionament de la resolució local, útil per entorns de xarxa local on no es disposa de servidor de noms propi i que evita haver d’accedir a equips o recursos per la seva IP.**
 
