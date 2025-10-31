@@ -1,5 +1,5 @@
 
-# 🧩 Fase Pràctica: Diagnosi de Noms (Auditoria amb CLI)
+# Fase Pràctica: Diagnosi de Noms (Auditoria amb CLI)
 
 Heu de demostrar l'ús de les principals utilitats de diagnosi DNS en els diferents sistemes operatius que utilitza el client (**Linux/macOS i Windows**).  
 Per a cada eina, executeu les comandes indicades a continuació contra el domini que s’indiqui explícitament i **captureu/analitzeu els resultats**.
@@ -10,7 +10,7 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
 ---
 
-## 🔹 A. Diagnosi Avançada amb `dig` (Linux / macOS)
+## 🔹 Diagnosi Avançada amb `dig` (Linux / macOS)
 
 ### 🧭 Comanda 1: Consulta Bàsica de Registre A
 
