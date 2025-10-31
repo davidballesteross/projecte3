@@ -78,7 +78,7 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
   Doncs que en provindre d'un **servidor autoritatiu**, ja que **conté la informació del domini, no** ens apareix el **missatge de no autoritatiu**.
 
-## 🔹 C. Resolucions locals
+## 🔹Resolucions locals
 
 **Finalment, es vol comprovar el funcionament de la resolució local, útil per entorns de xarxa local on no es disposa de servidor de noms propi i que evita haver d’accedir a equips o recursos per la seva IP.**
 
