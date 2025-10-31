@@ -82,6 +82,10 @@ Per fer aquesta demostració, caldrà usar un equip **Zorin** amb dues interfíc
 
 **Finalment, es vol comprovar el funcionament de la resolució local, útil per entorns de xarxa local on no es disposa de servidor de noms propi i que evita haver d’accedir a equips o recursos per la seva IP.**
 
+Creem un adaptador pont a la màquina, per a poder tindre connectivitat en la xarxa local
+
+<img src="img/2.png" alt="Configurant adaptador pont">
+
 Assignem la IP **192.168.4.26/24**.
 
 <img src="img/1.png" alt="Configurant la IP a la màquina">
