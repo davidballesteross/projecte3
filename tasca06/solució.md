@@ -1,7 +1,7 @@
 
 # Fase Pràctica: Diagnosi de Noms (Auditoria amb CLI)
 
-Per començar caldrà usar un equip **Zorin** amb dues interfícies:
+Per començar caldrà utilitzar un equip **Zorin** amb dues interfícies:
 - **Primera:** en NAT  
 - **Segona:** en adaptador pont amb la IP correctament configurada segons indicacions dels vostres responsables.
 
