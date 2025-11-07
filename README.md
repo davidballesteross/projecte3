@@ -35,8 +35,4 @@ La metodologia segueix un model **àgil i col·laboratiu**, fent servir **GitHub
 - Treball en equip i gestió del temps.  
 - Ús d’eines de control de versions i canals de comunicació tècnica.  
 
----
 
-## Tasques
-- [Tasca01](tascas01/readme.md)
-- [Tasca06](tasca06/readme.md)
