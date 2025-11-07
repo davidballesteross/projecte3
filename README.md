@@ -33,6 +33,8 @@ La metodologia segueix un model **àgil i col·laboratiu**, fent servir **GitHub
 - Gestió i resolució d’incidències en entorns IT.  
 - Documentació tècnica i comunicació professional.  
 - Treball en equip i gestió del temps.  
-- Ús d’eines de control de versions i canals de comunicació tècnica.  
+- Ús d’eines de control de versions i canals de comunicació tècnica.
+
+---
 
 
