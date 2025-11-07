@@ -36,6 +36,16 @@ La metodologia segueix un model **àgil i col·laboratiu**, fent servir **GitHub
 - Ús d’eines de control de versions i canals de comunicació tècnica.
 
 ---
-
+## Tasques
+- [Tasca01](tascas01/readme.md)
+- [Tasca02](tasca02/readme.md)
+- [Tasca03](tasca03/readme.md)
+- [Tasca04](tasca04/readme.md)
+- [Tasca05](tasca05/readme.md)
+- [Tasca06](tasca06/readme.md)
+- [Tasca07](tasca07/readme.md)
+- [Tasca08](tasca08/readme.md)
+- [Tasca09](tasca09/readme.md)
+- [Tasca10](tasca10/readme.md)
 
 
