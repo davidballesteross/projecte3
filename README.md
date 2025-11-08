@@ -48,4 +48,12 @@ La metodologia segueix un model **àgil i col·laboratiu**, fent servir **GitHub
 - [Tasca09](tasca09/readme.md)
 - [Tasca10](tasca10/readme.md)
 
+---
 
+## Productes finals
+- [P01](p01/readme.md)
+- [P02](p02/readme.md)
+- [P03](p03/readme.md)
+- [P04](p04/readme.md)
+- [P05](p05/readme.md)
+- [P06](p06/readme.md)
