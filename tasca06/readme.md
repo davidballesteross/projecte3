@@ -80,6 +80,7 @@ Dins la carpeta `tasca06` es troben els següents arxius:
 
 Podeu consultar tots els documents fent clic al document corresponent:  
 - A l’arxiu [solució](solució.md) podeu trobar la guia completa amb resultats i anàlisi de la pràctica.
+- Al arxiu [video](video.md) podeu trobar el link al video.
 
 [Tornar pàgina del projecte](../README.md)
 
