@@ -11,4 +11,6 @@ Assegureu-vos d’**atorgar els permisos de visualització** necessaris perquè 
 
 Podeu consultar tots els documents fent clic al document corresponent.
 
-Al arxiu [video](video.md) podeu trobar el link al video.
+Al arxiu [video](../video.md) podeu trobar el link al video.
+
+[Tornar pàgina del projecte](../README.md)
