@@ -1,4 +1,4 @@
-# P06: Vídeo — Fonaments DNS
+ # P06: Vídeo — Fonaments DNS
 
 A la tasca **“T06: Fonaments del DNS”** heu elaborat un vídeo dins de l’encàrrec que **Digicorp** va sol·licitar a **EverPia** per a la formació del seu personal tècnic sobre els conceptes bàsics del sistema de noms de domini (**DNS**).
 
@@ -11,6 +11,6 @@ Assegureu-vos d’**atorgar els permisos de visualització** necessaris perquè 
 
 Podeu consultar tots els documents fent clic al document corresponent.
 
-Al arxiu [video](../video.md) podeu trobar el link al video.
+Al arxiu [video](tasca06/video.md) podeu trobar el link al video.
 
 [Tornar pàgina del projecte](../README.md)
