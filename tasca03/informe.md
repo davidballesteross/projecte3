@@ -1,6 +1,6 @@
 # 📘 Guia de Configuració de LVM (Logical Volume Manager)  
 
-## **1️⃣ Configuració inicial**  
+## **1️ Configuració inicial**  
 
 Primer, es crea una màquina virtual amb **Zorin OS**.
 
@@ -30,7 +30,7 @@ Podem observar que, a més del disc principal (**sda**), apareixen els discos no
 
 ---
 
-## **2️⃣ Creació dels volums físics (PV)**  
+## **2️ Creació dels volums físics (PV)**  
 
 Ara haurem de crear els **volums físics** amb la comanda **pvcreate** (Physical Volume Create) i l’instal·larem amb la següent comanda:
 
@@ -44,7 +44,7 @@ I executem les següents comandes per a crear-los:
 
 ---
 
-## **3️⃣ Creació del grup de volums (VG)**
+## **3️ Creació del grup de volums (VG)**
 
 Una vegada amb els **volums físics creats**, hem de **crear el grup de volums**, que és la capa on **s’unifiquen els diferents discos físics** per a tindre un **espai** on **després crear** els **volums lògics**.
 
@@ -58,7 +58,7 @@ Podem verificar-lo amb:
 
 ---
 
-## **4️⃣ Creació del volum lògic (LV)**
+## **4️ Creació del volum lògic (LV)**
 
 Ara ja podem crear els **volums lògics**, ja que es creen a partir del **grup de volums**, indicant la mida, el nom i el **VG** que volem usar. 
 
@@ -76,7 +76,7 @@ I si tornem a fer la comanda **vgdisplay**, podem veure que ja marca l’espai c
 
 ---
 
-## **5️⃣ Formatació i muntatge del LV**
+## **5️ Formatació i muntatge del LV**
 
 Hem creat el **LV**, però els **volums lògics** són com les **particions**, per tant, per utilitzar-se caldrà **formatar-los amb un sistema d’arxius**.
 
@@ -98,7 +98,7 @@ sudo mount /dev/volgrup/lv01 /mnt/lv01
 
 ---
 
-## **6️⃣ Muntatge persistent**
+## **6️ Muntatge persistent**
 
 Encara que fer-ho d’aquesta manera és possible, **no és viable**, ja que caldria fer **aquesta acció cada vegada que s’inicia la màquina**.
 
@@ -121,7 +121,7 @@ I apliquem els canvis:
 
 ---
 
-## **7️⃣ Alta disponibilitat (mirror)**
+## **7️ Alta disponibilitat (mirror)**
 
 Per a tindre **redundància**, utilitzarem el **mirroring**, que és una **idea similar** al **RAID 1** però a nivell de **volums lògics**.
 
@@ -169,7 +169,7 @@ sudo lvs -a -o +devices | grep mirror
 
 ---
 
-## **8️⃣ Instantànies (Snapshots)**
+## **8️ Instantànies (Snapshots)**
 
 **Eliminarem el volum lògic anterior** i **ara en crearem un de nou** però de **100MiB de mida**:
 
