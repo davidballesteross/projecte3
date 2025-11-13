@@ -161,8 +161,6 @@ En aquest apartat configurarem les opcions generals del gestor, com ara l’idio
 
 <img src="img/16.png" alt="Configuració general del servidor LDAP al LAM, idioma i compte d'administrador." width="750">
 
-<img src="img/17.png" alt="Configuració general del servidor LDAP al LAM, idioma i compte d'administrador." width="750">
-
 A la segona pestanya **Account Types**, definirem els **DN** dels usuaris i dels grups, incloent-hi una **OU** per als usuaris i una altra per als grups.
 
 <img src="img/18.png" alt="Definició dels DN per a usuaris i grups a la pestanya Account Types del LAM." width="750">
