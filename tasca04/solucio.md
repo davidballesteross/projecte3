@@ -1,79 +1,81 @@
-# T04: You serve as director. LDAP  
 
-## 1️⃣ Creación of the virtual machine
+# T04: Serveis de directori. LDAP  
 
-De repente, update the packages:
+## 1️ Creació de la màquina virtual
+
+Creem una màquina virtual on instal·larem **Ubuntu Server**.
+
+<img src="img/1.png" alt="Creació d'una màquina virtual amb Ubuntu Server per instal·lar el servei LDAP.">
+
+Un cop dins, actualitzem els paquets:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-Edit the archivo `/etc/hosts` to define the domain:
+Editem el fitxer `/etc/hosts` per definir el domini:
 
 ```bash
 sudo nano /etc/hosts
 ```
 
-<img src="img/59.png" alt="Edició de l'arxiu /etc/hosts per definir el domini del servidor.">
+<img src="img/2.png" alt="Edició de l'arxiu /etc/hosts per definir el domini del servidor.">
 
-Verificamos que los cambios se han aplicado correctamente en el dominio.
+Verifiquem que els canvis s’han aplicat correctament al domini.
 
-<img src="img/60.png" alt="Visualització dels canvis aplicats al domini després d'editar l'arxiu hosts.">
+<img src="img/3.png" alt="Visualització dels canvis aplicats al domini després d'editar l'arxiu hosts.">
 
 ---
 
-## 2️⃣ Configuración de red
+## 2️ Configuració de xarxa
 
-Para permitir la comunicación con el anfitrión, configuramos una interfaz **Host-Only**:
+Per permetre la comunicació amb l’amfitrió, configurem una interfície **Host-Only**:
 
-<img src="img/61.png" alt="Configuració d'una interfície de xarxa host-only per comunicar-se amb l'amfitrió." width="750">
+<img src="img/4.png" alt="Configuració d'una interfície de xarxa host-only per comunicar-se amb l'amfitrió." width="750">
 
-Editaremos el archivo `/etc/netplan/50-cloud-init.yaml` con el siguiente pedido para habilitar la interfaz:
+Editarem l’arxiu `/etc/netplan/50-cloud-init.yaml` amb la comanda següent per habilitar la interfície:
 
 ```bash
 sudo nano /etc/netplan/50-cloud-init.yaml
 ```
 
-<img src="img/63.png" alt="Edició de l'arxiu /etc/netplan/50-cloud-init.yaml per habilitar la interfície host-only.">
+<img src="img/5.png" alt="Edició de l'arxiu /etc/netplan/50-cloud-init.yaml per habilitar la interfície host-only.">
 
-Aplicamos los cambios y comprobamos la interfaz con `ip a`:
+Apliquem els canvis i comprovem la interfície amb `ip a`:
 
-<img src="img/62.png" alt="Comprovació de la nova interfície de xarxa amb la comanda ip a." width="750">
+<img src="img/6.png" alt="Comprovació de la nova interfície de xarxa amb la comanda ip a." width="750">
 
 ---
 
-## 3️⃣ Instalación de OpenLDAP
+## 3️ Instal·lació d’OpenLDAP
 
-Instalamos el servidor LDAP y las utilidades:
+Instal·lem el servidor LDAP i les utilitats:
 
 ```bash
 sudo apt install slapd ldap-utils -y
 ```
 
-Durante la instalación, el sistema nos pedirá la contraseña del administrador. Introduciremos `p@ssw0rd`, tal y como se indica en el Pliego de Condiciones Técnicas.
+Durant la instal·lació, el sistema ens demanarà la contrasenya de l’administrador. Introduirem `p@ssw0rd`, tal com s’indica al Plec de Condicions Tècniques.
 
-<img src="img/9.png" alt="Instal·lació del servei OpenLDAP mitjançant la comanda apt install slapd ldap-utils.">
-<img src="img/10.png" alt="Instal·lació del servei OpenLDAP mitjançant la comanda apt install slapd ldap-utils.">
-<img src="img/11.png" alt="Instal·lació del servei OpenLDAP mitjançant la comanda apt install slapd ldap-utils.">
-<img src="img/12.png" alt="Instal·lació del servei OpenLDAP mitjançant la comanda apt install slapd ldap-utils.">
+<img src="img/7.png" alt="Instal·lació del servei OpenLDAP mitjançant la comanda apt install slapd ldap-utils.">
 
-Una vez ejecutado el pedido anterior, comprobaremos que el servicio se está ejecutando correctamente con el siguiente pedido:
+Un cop executada la comanda anterior, comprovarem que el servei s’està executant correctament amb la següent comanda:
 
 ```bash
 sudo systemctl status slapd
 ```
 
-<img src="img/64.png" alt="Verificació de l'estat del servei slapd amb systemctl status.">
+<img src="img/8.png" alt="Verificació de l'estat del servei slapd amb systemctl status.">
 
-Ahora comprobaremos que el directorio se ha creado con el nombre deseado:
+Ara comprovarem que el directori s’ha creat amb el nom desitjat:
 
 ```bash
 sudo slapcat
 ```
 
-<img src="img/65.png" alt="Consulta del contingut del directori LDAP amb la comanda slapcat.">
+<img src="img/9.png" alt="Consulta del contingut del directori LDAP amb la comanda slapcat.">
 
-En caso de que el nombre del directorio no sea el correcto, deberemos reconfigurar el servicio con el siguiente pedido:
+En cas que el nom del directori no sigui el correcte, haurem de reconfigurar el servei amb la següent comanda:
 
 ```bash
 sudo dpkg-reconfigure slapd
@@ -81,17 +83,17 @@ sudo dpkg-reconfigure slapd
 
 ---
 
-## 4️⃣ Creación de unidades organizativas (OU)
+## 4️ Creació d’unitats organitzatives (OU)
 
-Ahora deberemos crear dos unidades organizativas (*OUs*): **users** y **groups**, mediante un archivo `.ldif`.  
+Ara haurem de crear dues unitats organitzatives (*OUs*): **users** i **groups**, mitjançant un fitxer `.ldif`.  
 
-Para hacerlo, en mi caso he creado dos archivos, `OU_users.ldif` `OU_groups.ldif` con el siguiente pedido:
+Per fer-ho, crearem l’arxiu `OU_users.ldif` amb la següent comanda:
 
 ```bash
 sudo nano OU_users.ldif
 ```
 
-Dentro del archivo añadiremos el siguiente contenido:
+A dins del fitxer hi afegirem el contingut següent:
 
 ```ldif
 dn: ou=users,dc=innovatech26,dc=test
@@ -105,235 +107,263 @@ objectClass: top
 objectClass: organizationalUnit
 ```
 
-<img src="img/15.png" alt="Creació del fitxer OU_users.ldif per definir les unitats organitzatives d'usuaris i grups.">
-<img src="img/16.png" alt="Creació del fitxer OU_users.ldif per definir les unitats organitzatives d'usuaris i grups.">
+<img src="img/10.png" alt="Creació del fitxer OU_users.ldif per definir les unitats organitzatives d'usuaris i grups.">
 
-
-Para crear finalmente las OUs, ejecutaremos el siguiente comando:
+Per crear finalment les OUs, executarem la comanda següent:
 
 ```bash
 sudo ldapadd -D "cn=admin,dc=innovatech26,dc=test" -W -f OU_users.ldif
 ```
 
-Para comprobar que se ha hecho correctamente pondremos el siguiente pedido:
+<img src="img/11.png" alt="Execució de la comanda ldapadd per afegir les OUs al directori LDAP.">
+
+Per comprovar que les OUs s’han afegit correctament, utilitzarem la comanda següent:
 
 ```bash
 ldapsearch -xLLL -b "dc=innovatech26,dc=test"
 ```
 
-<img src="img/66.png" alt="Verificació de les OUs creades amb ldapsearch.">
+<img src="img/12.png" alt="Verificació de les OUs creades amb ldapsearch.">
 
 ---
 
-## 5️⃣ Instalación del gestor LDAP (LAM)
+## 5️ Instal·lació del gestor LDAP (LAM)
 
-Puesto que administrar el servidor de dominio desde la línea de mandatos puede resultar complejo, es recomendable utilizar un gestor de usuarios LDAP como **LDAP Account Manager (LAM)**.
+Com que administrar el servidor de domini des de la línia d’ordres pot resultar complex, és recomanable utilitzar un gestor d’usuaris LDAP com **LDAP Account Manager (LAM)**.
 
-Para instalarlo, ejecutaremos el siguiente comando (el parámetro `-y` evita que aparezcan mensajes de confirmación durante la instalación):
+Per instal·lar-lo, executarem la comanda següent (el paràmetre `-y` evita que apareguin missatges de confirmació durant la instal·lació):
 
 ```bash
 sudo apt install ldap-account-manager -y
 ```
 
-Una vez instalado, nos conectaremos desde la máquina física a través de la interfaz **host-only**, introduciendo su dirección IP seguida de `/lam` en el navegador:
+Un cop instal·lat, ens hi connectarem des de la màquina física a través de la interfície **host-only**, introduint la seva adreça IP seguida de `/lam` al navegador:
 
 ```
 http://IP_DEL_SERVER/lam
 ```
 
-<img src="img/19.png" alt="Accés a la interfície web del LAM des del navegador mitjançant la IP del servidor." width="750">
+<img src="img/13.png" alt="Accés a la interfície web del LAM des del navegador mitjançant la IP del servidor." width="750">
 
-Una vez dentro, accederemos a **Edit server profiles** para empezar la configuración del perfil del servidor.
-<img src="img/20.png" alt="Pantalla inicial de configuració del LAM, accedint a Edit server profiles." width="750">
+El primer pas és configurar el gestor per al nostre directori.  
 
-En este apartado configuraremos las opciones generales del gestor, como el idioma, la cuenta de administrador y otros parámetros básicos.
+Ens dirigirem a la part superior dreta i farem clic a **LAM configuration**.
 
-<img src="img/67.png" alt="Configuració general del servidor LDAP al LAM, idioma i compte d'administrador." width="750">
+Un cop dins, accedirem a **Edit server profiles** per començar la configuració del perfil del servidor.
 
-<img src="img/68.png" alt="Configuració general del servidor LDAP al LAM, idioma i compte d'administrador." width="750">
+<img src="img/14.png" alt="Pantalla inicial de configuració del LAM, accedint a Edit server profiles." width="750">
 
-En la segunda pestaña **Account Types**, definiremos los **DN** de los usuarios y de los grupos, incluyendo una **OU** para los usuarios y otra para los grupos.
+A continuació, apareixerà el panell d’inici de sessió, on la contrasenya per defecte és `lam`.
 
-<img src="img/70.png" alt="Definició dels DN per a usuaris i grups a la pestanya Account Types del LAM." width="750">
+<img src="img/15.png" alt="Panell de login del LAM amb contrasenya per defecte lam." width="650">
 
-A continuación, aparecerá el panel de inicio de sesión, al que accederemos con el usuario administrador del dominio:
+En aquest apartat configurarem les opcions generals del gestor, com ara l’idioma, el compte d’administrador i altres paràmetres bàsics.
+
+<img src="img/16.png" alt="Configuració general del servidor LDAP al LAM, idioma i compte d'administrador." width="750">
+
+<img src="img/17.png" alt="Configuració general del servidor LDAP al LAM, idioma i compte d'administrador." width="750">
+
+A la segona pestanya **Account Types**, definirem els **DN** dels usuaris i dels grups, incloent-hi una **OU** per als usuaris i una altra per als grups.
+
+<img src="img/18.png" alt="Definició dels DN per a usuaris i grups a la pestanya Account Types del LAM." width="750">
+<img src="img/19.png" alt="Definició dels DN per a usuaris i grups a la pestanya Account Types del LAM." width="750">
+
+Un cop completada la configuració, guardarem els canvis fent clic al botó **Save**, situat a la part inferior esquerra (de color blau).
+
+<img src="img/20.png" alt="Desament de la configuració del LAM fent clic a Save.">
+
+Tot seguit, apareixerà el panell d’inici de sessió, on accedirem amb l’usuari administrador del domini:
+
 ```
-Usuario: admin  
-Contraseña: p@ssw0rd
+Usuari: admin  
+Contrasenya: p@ssw0rd
 ```
-<img src="img/71.png" alt="Pantalla d'inici de sessió al panell d'administració amb admin/p@ssw0rd." width="750">
+<img src="img/21.png" alt="Pantalla d'inici de sessió al panell d'administració amb admin/p@ssw0rd." width="750">
 
 ---
 
-## 6️⃣ Creación de grupos y usuarios
+## 6️ Creació de grups i usuaris
 
-### Grupos
+### Grups
 
-Una vez dentro del panel de administración, debemos crear dos **grupos de seguridad** en el directorio: `tech` y `manager`.  
+Un cop dins del panell d’administració, hem de crear dos **grups de seguretat** al directori: `tech` i `manager`.  
 
-Para ello, iremos a **Accounts → Groups**.
+Per fer-ho, anirem a **Accounts → Groups**.
 
-Una vez dentro de este apartado, haremos clic en **New group** para crear ambos grupos.
+<img src="img/22.png" alt="Creació dels grups de seguretat tech i manager dins del LAM." width="750">
 
-<img src="img/72.png" alt="Creació dels grups de seguretat tech i manager dins del LAM." width="750">
+Un cop dins d’aquest apartat, farem clic a **New group** per crear els dos grups. 
 
-Después de configurarlos, pulsamos **Save** para guardar los cambios.
+<img src="img/23.png" alt="Creació dels grups de seguretat tech i manager dins del LAM." width="750">
 
-Por último, ya tenemos creados los dos grupos en el directorio.
+Després de configurar-los, premem **Save** per desar els canvis.
 
-<img src="img/73.png" alt="Confirmació de la creació correcta dels grups tech i manager." width="750">
+Finalment, ja tenim creats els dos grups al directori.
 
-### Usuarios
+<img src="img/24.png" alt="Confirmació de la creació correcta dels grups tech i manager." width="750">
 
-Repetiremos el mismo proceso para crear un usuario para cada grupo, llamados `tech01` y `manager01`.  
+### Usuaris
 
-Para ello, nos dirigiremos a **Accounts → Users** y haremos clic en **New user**.
+Repetirem el mateix procés per crear un usuari per a cada grup, anomenats `tech01` i `manager01`.  
 
-En el interior del formulario deberemos introducir la información personal del usuario, como la dirección, el teléfono, la fotografía y otros datos básicos.
+Per fer-ho, ens dirigirem a **Accounts → Users** i farem clic a **New user**.
 
-<img src="img/74.png" alt="Formulari d'usuari amb informació personal i Unix per tech01." width="750">
+<img src="img/25.png" alt="Creació d'un nou usuari tech01 al panell d'usuaris del LAM." width="750">
 
-También configuraremos la información **Unix**, necesaria para que el usuario pueda iniciar sesión en el cliente.
+A l’interior del formulari haurem d’introduir la informació personal de l’usuari, com ara l’adreça, el telèfon, la fotografia i altres dades bàsiques.
 
-<img src="img/75.png" alt="Formulari d'usuari amb informació personal i Unix per tech01." width="750">
+<img src="img/26.png" alt="Formulari d'usuari amb informació personal i Unix per tech01." width="750">
 
-En este paso, deberemos crear el **grupo primario** con el mismo nombre que el usuario.
+També configurarem la informació **Unix**, necessària perquè l’usuari pugui iniciar sessió al client.  
 
-<img src="img/77.png" alt="Formulari d'usuari amb informació personal i Unix per tech01." width="750">
+En aquest pas, haurem de crear el **grup primari** amb el mateix nom que l’usuari.
 
-Deberemos añadir el usuario al **grupo correspondiente**.  
+<img src="img/27.png" alt="Formulari d'usuari amb informació personal i Unix per tech01." width="750">
 
-Para ello, haremos clic en el botón **Edit groups** y, una vez dentro, moveremos el grupo `tech` (en este caso) en la sección **Selected groups** para asignarlo correctamente al usuario.
+Haurem d’afegir l’usuari al **grup corresponent**.  
 
-Por último, deberemos crear una **contraseña** para que el usuario de dominio pueda iniciar sesión.  
+Per fer-ho, farem clic al botó **Edit groups** i, un cop dins, mourem el grup `tech` (en aquest cas) a la secció **Selected groups** per assignar-lo correctament a l’usuari.
 
-Para ello, haremos clic en el botón **Set password**, introduciremos la contraseña `1234` y marcaremos la casilla que obliga al usuario a cambiarla en el **primer inicio de sesión**.
+<img src="img/28.png" alt="Assignació de l'usuari tech01 al grup tech mitjançant Edit groups." width="750">
 
-<img src="img/78.png" alt="Assignació de l'usuari tech01 al grup tech mitjançant Edit groups." width="750">
+Finalment, haurem de crear una **contrasenya** perquè l’usuari de domini pugui iniciar sessió.  
 
-Una vez completados estos pasos, guardaremos al nuevo usuario haciendo clic en el botón **Save**.  
+Per fer-ho, farem clic al botó **Set password**, introduirem la contrasenya `1234` i marcarem la casella que obliga l’usuari a canviar-la en el **primer inici de sessió**.
 
-A continuación, repetiremos el mismo proceso con el usuario y el grupo `manager01`, obteniendo el siguiente resultado:
+<img src="img/29.png" alt="Configuració de la contrasenya de l'usuari tech01 amb l'opció de canvi obligatori.">
 
-<img src="img/76.png" alt="Configuració de la contrasenya de l'usuari tech01 amb l'opció de canvi obligatori.">
+Un cop completats aquests passos, guardarem el nou usuari fent clic al botó **Save**.  
+
+A continuació, repetirem el mateix procés amb l’usuari i el grup `manager01`, obtenint el resultat següent:
+
+<img src="img/30.png" alt="Visualització dels dos usuaris tech01 i manager01 creats correctament." width="750">
 
 ---
 
-## 7️⃣ Configuración del cliente (ZorinOS)
+## 7️ Configuració del client (ZorinOS)
 
-Para comprobar que el servidor **LDAP** funciona correctamente, configuraremos un **cliente ZorinOS**.  
+Per comprovar que el servidor **LDAP** funciona correctament, configurarem un **client ZorinOS**.  
 
-A este cliente le crearemos una **segunda interfaz de red** en modo **host-only**, para que pueda comunicarse con el servidor.
+A aquest client li crearem una **segona interfície de xarxa** en mode **host-only**, per tal que pugui comunicar-se amb el servidor.
 
-Una vez dentro del cliente, deberemos **configurar el nombre del equipo** para que forme parte del mismo dominio que el servidor.
+<img src="img/31.png" alt="Configuració d'un client ZorinOS amb interfície host-only per connectar-se al servidor LDAP." width="750">
 
-Como no disponemos de un servicio **DNS**, editaremos el archivo `/etc/hosts` del cliente para que pueda resolver el nombre del servidor correctamente.
+Un cop dins del client, haurem de **configurar el nom de l’equip** perquè formi part del mateix domini que el servidor.
 
-<img src="img/79.png" alt="Edició de l'arxiu /etc/hosts del client per afegir el servidor de domini.">
+Com que no disposem d’un servei **DNS**, editarem el fitxer `/etc/hosts` del client per tal que pugui resoldre el nom del servidor correctament.
 
-Ahora comprobaremos que los nombres se resuelven correctamente ejecutando los siguientes pedidos:
+<img src="img/32.png" alt="Edició de l'arxiu /etc/hosts del client per afegir el servidor de domini.">
 
-### Verificar el nombre de host del cliente
+Ara comprovarem que els noms es resolen correctament executant les comandes següents:
 
-Para asegurarnos de que el nombre del equipo se ha cambiado correctamente:
+### Verificar el nom d’host del client
+
+Per assegurar-nos que el nom de l’equip s’ha canviat correctament:
 
 ```bash
 hostname -f
 ```
 
-### Comprobar la resolución del servidor de dominio
+### Comprovar la resolució del servidor de domini
 
-Para verificar que la resolución DNS hacia el servidor de dominio es correcta:
+Per verificar que la resolució DNS cap al servidor de domini és correcta:
 
 ```bash
 dig server.innovatech26.test
 ```
 
-<img src="img/80.png" alt="Comprovació del nom d'amfitrió amb la comanda hostname -f i consulta DNS del domini server.innovatech26.test amb la comanda dig." width="750">
+<img src="img/33.png" alt="Comprovació del nom d'amfitrió amb la comanda hostname -f i consulta DNS del domini server.innovatech26.test amb la comanda dig." width="750">
 
-### Instalación de los módulos de autenticación LDAP
+### Instal·lació dels mòduls d’autenticació LDAP
 
-Para poder utilizar el cliente dentro del dominio, debemos instalar los **módulos necesarios** con el siguiente pedido:
+Per poder utilitzar el client dins del domini, hem d’instal·lar els **mòduls necessaris** amb la comanda següent:
 
 ```bash
 sudo apt install libnss-ldap libpam-ldap ldap-utils nscd -y
 ```
 
-A continuación, se iniciará el proceso de configuración de los **módulos de autenticación**.
+A continuació, s’iniciarà el procés de configuració dels **mòduls d’autenticació**.
 
 
-<img src="img/81.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
-<img src="img/82.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
-<img src="img/83.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
-<img src="img/84.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
-<img src="img/85.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
-<img src="img/86.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
+<img src="img/34.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
+<img src="img/35.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
+<img src="img/36.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
+<img src="img/37.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
+<img src="img/38.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
+<img src="img/39.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
+<img src="img/40.png" alt="Configuració inicial dels mòduls d'autenticació LDAP.">
 
-Para comprobar la conectividad con el servidor, haremos una consulta **ldapsearch** desde el cliente con el siguiente pedido:
+Per comprovar la connectivitat amb el servidor, farem una consulta **ldapsearch** des del client amb la comanda següent:
 
 ```bash
 ldapsearch -x -D "cn=admin,dc=innovatech26,dc=test" -W -H ldap://server.innovatech26.test -b "dc=innovatech26,dc=test" objectClass=posixAccount uid
 ```
 
-<img src="img/87.png" alt="Comprovació de la connectivitat LDAP amb la comanda ldapsearch.">
+<img src="img/41.png" alt="Comprovació de la connectivitat LDAP amb la comanda ldapsearch.">
 
 ---
 
-## 8️⃣ Integración PAM y NSS
+## 8️ Integració PAM i NSS
 
-Ahora configuraremos el archivo `nsswitch.conf` para indicar que se utilizará **LDAP** para la gestión de usuarios y grupos.
+Ara configurarem l’arxiu `nsswitch.conf` per indicar que s’utilitzarà **LDAP** per a la gestió d’usuaris i grups.
 
 ```bash
 sudo nano /etc/nsswitch.conf
 ```
 
-<img src="img/88.png" alt="Edició de l'arxiu /etc/nsswitch.conf per afegir suport LDAP a usuaris i grups.">
+<img src="img/42.png" alt="Edició de l'arxiu /etc/nsswitch.conf per afegir suport LDAP a usuaris i grups.">
 
-En el archivo `/etc/pam.d/common-password`, eliminaremos la línea que contenga el término `use_authok`.
+Al fitxer `/etc/pam.d/common-password`, eliminarem la línia que contingui el terme `use_authok`.
 
-<img src="img/89.png" alt="Modificació de l'arxiu /etc/pam.d/common-password per eliminar use_authok.">
+<img src="img/43.png" alt="Modificació de l'arxiu /etc/pam.d/common-password per eliminar use_authok.">
 
-En el archivo `/etc/pam.d/common-session`, añadiremos la siguiente línea para permitir la **creación automática de los perfiles de usuario**:
+Al fitxer `/etc/pam.d/common-session`, afegirem la línia següent per permetre la **creació automàtica dels perfils d’usuari**:
 
-<img src="img/90.png" alt="Afegir línia a /etc/pam.d/common-session per crear perfils d'usuari.">
+<img src="img/44.png" alt="Afegir línia a /etc/pam.d/common-session per crear perfils d'usuari.">
 
-Ahora reiniciaremos el servicio con el siguiente pedido:
+Ara reiniciarem el servei amb la comanda següent:
 
 ```bash
 sudo systemctl restart nscd
 ```
 
-Una vez que el servicio se haya reiniciado, comprobaremos que detecta correctamente los usuarios **LDAP** con este pedido:
+Un cop el servei s’hagi reiniciat, comprovarem que detecta correctament els usuaris **LDAP** amb aquesta comanda:
 
 ```bash
 getent passwd | tail
 ```
 
-Podemos verificar que el sistema muestra correctamente a los usuarios provenientes del directorio **LDAP**.
-<img src="img/91.png" alt="Reinici del servei nscd i comprovació dels usuaris LDAP amb getent passwd.">
+Podem verificar que el sistema mostra correctament els usuaris provinents del directori **LDAP**.
 
-## 9️⃣ Inicio de sesión gráfica
+<img src="img/45.png" alt="Reinici del servei nscd i comprovació dels usuaris LDAP amb getent passwd.">
 
-Para finalizar, editaremos el archivo `/etc/pam.d/gdm-launch-environment` para permitir el inicio de sesión gráfica de los usuarios del dominio.
+## 9️ Inici de sessió gràfica
 
-<img src="img/92.png" alt="Edició de l'arxiu /etc/pam.d/gmd-launch-environment per permetre inici de sessió gràfic.">
+Per finalitzar, editarem el fitxer `/etc/pam.d/gdm-launch-environment` per permetre l’inici de sessió gràfica dels usuaris del domini.
 
-Reiniciaremos el cliente y, en la pantalla de inicio de sesión, haremos clic en **Not listed** para introducir manualmente otro usuario.
+<img src="img/46.png" alt="Edició de l'arxiu /etc/pam.d/gmd-launch-environment per permetre inici de sessió gràfic.">
 
-<img src="img/93.png" alt="Pantalla d'inici de sessió del client amb l'opció Not listed per introduir tech01.">
+Reiniciarem el client i, a la pantalla d’inici de sessió, farem clic a **Not listed** per introduir manualment un altre usuari.  
 
-A continuación, introduciremos el usuario `tech01` para iniciar sesión con las siguientes credenciales:
+<img src="img/47.png" alt="Pantalla d'inici de sessió del client amb l'opció Not listed per introduir tech01.">
 
-- **Usuario:** `tech01`
-- **Contraseña:** `1234`
+A continuació, introduirem l’usuari `tech01` per iniciar sessió amb les credencials següents:
 
-<img src="img/94.png" alt="Primera connexió de l'usuari tech01 i creació automàtica del directori personal.">
+- **Usuari:** `tech01`
+- **Contrasenya:** `1234`
 
-Después de introducir la contraseña, aparecerá un mensaje indicando que se está creando el **directorio personal** del usuario, en este caso `/home/tech01`.
+<img src="img/48.png" alt="Primera connexió de l'usuari tech01 i creació automàtica del directori personal.">
 
-Una vez iniciada la sesión, se puede comprobar que todo se ha creado correctamente.
+Després d’introduir la contrasenya, apareixerà un missatge indicant que s’està creant el **directori personal** de l’usuari, en aquest cas `/home/tech01`.
 
-<img src="img/95.png" alt="Sessió iniciada correctament amb l'usuari tech01 verificant el bon funcionament del domini.">
+<img src="img/49.png" alt="Primera connexió de l'usuari tech01 i creació automàtica del directori personal.">
 
+Un cop iniciada la sessió, podem comprovar que tot s’ha creat correctament.
 
-[Tornar a enunciat](README.MD)
+<img src="img/50.png" alt="Sessió iniciada correctament amb l'usuari tech01 verificant el bon funcionament del domini.">
+
+Si repetim el mateix procés amb l’usuari `manager01`, obtindrem el mateix resultat.
+
+<img src="img/51.png" alt="Sessió iniciada correctament amb l'usuari manager01 verificant el bon funcionament del domini.">
+
+[Tornar a enunciat](README.md)
