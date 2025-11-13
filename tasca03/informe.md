@@ -1,4 +1,4 @@
-# 📘 Guia de Configuració de LVM (Logical Volume Manager)  
+#  Guia de Configuració de LVM (Logical Volume Manager)  
 
 ## **1️ Configuració inicial**  
 
