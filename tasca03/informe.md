@@ -229,4 +229,4 @@ I després ja podem **aplicar-la** i podem veure que **ha desaparegut el file04*
 
 <img src="img/22.png">
 
-[Tornar a enunciat](README.md)
+[Tornar a enunciat](readme.md)
