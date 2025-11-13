@@ -53,3 +53,5 @@ Dins la carpeta `tasca04` es troben els següents fitxers:
 Podeu consultar tots els documents fent clic al document corresponent:
 - Al arxiu [solucio](solucio.md) podeu trobar la guia.
 
+[Tornar pàgina del projecte](../README.md)
+
