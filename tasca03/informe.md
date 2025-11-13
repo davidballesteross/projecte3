@@ -1,5 +1,24 @@
 #  Guia de Configuració de LVM (Logical Volume Manager)  
 
+**Autor:** David Ballesteros Antich  
+**Curs:** 2B – CFGM Sistemes Microinformàtics i Xarxes  
+**Mòdul:** Seguretat informàtica  
+**Professora:** Isabel Bosch  
+**Data:** 02/10/2025  
+**Guia de comandes:** [Document original]([https://docs.google.com/document/d/1R-FFYnsRPVyzYx2FpculMyQtKFhqpgO-tayO0LNToKQ/edit?usp=sharing](https://docs.google.com/presentation/d/1EFSMfLQRM0wvxRFEvXLN0oaiBq3goWNQ/edit?usp=sharing&ouid=104728425662496836733&rtpof=true&sd=true))
+
+## Índex
+1. [Pas 1: Configuració inicial](#pas-1-configuració-inicial)
+2. [Pas 2: Creació dels volums físics](#pas-2-creació-dels-volums-físics)
+3. [Pas 3: Creació del grup de volums (VG)](#pas-3-creació-del-grup-de-volums-vg)
+4. [Pas 4: Creació del volum lògic (LV)](#pas-4-creació-del-volum-lògic-lv)
+5. [Pas 5: Formatació i muntatge del LV](#pas-5-formatació-i-muntatge-del-lv)
+6. [Pas 6: Muntatge persistent](#pas-6-muntatge-persistent)
+7. [Pas 7: Alta disponibilitat (mirror)](#pas-7-alta-disponibilitat-mirror)
+   - [7.1 Creació del nou grup de volums per al mirror](#7.1-creació-del-nou-grup-de-volums-per-al-mirror)
+8. [Pas 8: Instantànies (Snapshots)](#pas-8-instantànies-snapshots)
+   - [8.1 Muntatge de la snapshot](#8.1-muntatge-de-la-snapshot)
+
 ## **1️ Configuració inicial**  
 
 Primer, es crea una màquina virtual amb **Zorin OS**.
