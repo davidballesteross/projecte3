@@ -102,3 +102,4 @@ Per comprovar-ho, podem treure 2 discos i tornar a iniciar la màquina.
 
 Apareixerà un avís indicant que hi ha hagut una reducció, però el «disc» virtual continuarà funcionant correctament.
 
+[Tornar a enunciat](readme.md)
