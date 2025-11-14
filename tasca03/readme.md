@@ -47,6 +47,8 @@ Dins la carpeta `tasca03` es troben els següents arxius:
 ## Documents
 
 Podeu consultar tots els documents fent clic al document corresponent:
-- A l’arxiu [informe](informe.md) podeu trobar l’informe complet del projecte.  
+- A l’arxiu [informe](informe.md) podeu trobar l’informe complet del projecte de zorin.
+- A l’arxiu [informe](informe.windows.md) podeu trobar l’informe complet del projecte de windows.
+
 
 [Tornar pàgina del projecte](../README.md)
