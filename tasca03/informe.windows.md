@@ -8,17 +8,17 @@
 
 Primer afegirem els **3 discos virtuals** a la màquina virtual.
 
-![img](img/img2.png)
+![img](img.windows/img2.png)
 
 Un cop creats els discos, **iniciem la màquina**. Quan Windows s'hagi iniciat, hem d'anar al **Panell de control** i buscar la secció **Espais d'emmagatzematge**.
 
-![img](img/img3.png)
+![img](img.windows/img3.png)
 
 Allà seleccionarem **Crear un nou grup i espais d'emmagatzematge**.
 
 Windows ens mostrarà els discos disponibles. En aquest primer pas **només seleccionarem 2 discos** i acceptarem.
 
-![img](img/img4.png)
+![img](img.windows/img4.png)
 
 Això crea el **Storage Pool**, que és el contenidor on es poden crear volums amb diferents nivells de resiliència.
 
@@ -26,7 +26,7 @@ Això crea el **Storage Pool**, que és el contenidor on es poden crear volums a
 
 Un cop creat el Storage Pool ens sortirà una secció tal i així:
 
-![img](img/img5.png)
+![img](img.windows/img5.png)
 
 Un cop creat el Storage Pool, ens apareixerà una secció com aquesta: ara configurarem el disc. En el meu cas he escollit:
 
@@ -38,21 +38,21 @@ Hem de recordar que, encara que hem posat **dos discos de 10 GB cadascun**, el r
 
 Per provar la resiliència, crearem un arxiu anomenat **prueba** dins la nova unitat.
 
-![img](img/img6.png)
+![img](img.windows/img6.png)
 
 Ara apagarem l'ordinador i **eliminarem un dels dos discos** de la màquina virtual per simular un error.
 
-![img](img/img7.png)
+![img](img.windows/img7.png)
 
 En tornar a iniciar Windows, apareixerà una **advertència indicant que el disc s'ha reduït**.
 
-![img](img/img8.png)
+![img](img.windows/img8.png)
 
 Tot i així, encara podrem obrir l'arxiu sense cap problema.
 
 Això demostra que el *mirror* realment protegeix contra la fallada d'un disc.
 
-![img](img/img9.png)
+![img](img.windows/img9.png)
 
 ## Configuració (paritat)
 
@@ -64,7 +64,7 @@ Ara tornarem a activar el disc que havíem tret, iniciarem la màquina i repetir
 
 Provarem la resiliència de tipus **Paritat**.
 
-![img](img/img10.png)
+![img](img.windows/img10.png)
 
 La paritat només utilitza l'espai d'un disc per guardar la informació de protecció.
 
@@ -76,25 +76,25 @@ Aquesta configuració és més eficient en espai que el mirall.
 
 Ara, amb la màquina apagada, hem d'afegir **2 discos més** per provar la següent resiliència.
 
-![img](img/img11.png)
+![img](img.windows/img11.png)
 
 Iniciarem la màquina i repetirem la configuració inicial una altra vegada.
 
-![img](img/img12.png)
+![img](img.windows/img12.png)
 
 Ara Windows detectarà els **dos discos nous** i els podrem seleccionar tots.
 
 Un cop seleccionats tots els discos, crearem un **nou grup d'emmagatzematge** i tornarem a configurar-lo.
 
-![img](img/img13.png)
+![img](img.windows/img13.png)
 
 Amb 3 discos ja es podria fer una configuració de resiliència, però per al **Triple Mirror** (reflex triple) es recomana tenir **un mínim de 5 discos** per disposar d'un espai d'emmagatzematge útil i estable.
 
-![img](img/img14.png)
+![img](img.windows/img14.png)
 
 Per comprovar-ho, podem treure 2 discos i tornar a iniciar la màquina.
 
-![img](img/img15.png)
+![img](img.windows/img15.png)
 
 Apareixerà un avís indicant que hi ha hagut una reducció, però el «disc» virtual continuarà funcionant correctament.
 
