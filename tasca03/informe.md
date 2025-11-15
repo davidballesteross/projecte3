@@ -19,6 +19,8 @@
 8. [Pas 8: Instantànies (Snapshots)](#pas-8-instantànies-snapshots)
    - [8.1 Muntatge de la snapshot](#8.1-muntatge-de-la-snapshot)
 
+
+
 ## **1️ Configuració inicial**  
 
 Primer, es crea una màquina virtual amb **Zorin OS**.
@@ -144,11 +146,11 @@ I apliquem els canvis:
 
 Per a tindre **redundància**, utilitzarem el **mirroring**, que és una **idea similar** al **RAID 1** però a nivell de **volums lògics**.
 
-Per a poder fer-ho, primer haurem **d'esborrar** els **volums lògics** i el **grup de volums** creat prèviament.
+Primer haurem **d'esborrar** els **volums lògics** i el **grup de volums** creat prèviament.
 
 Per a fer-ho seguirem els següents passos:
 
-Primer **desmuntarem** el **volum lògic** amb la comanda **umount /mnt/lv01**, per a desmuntar el LV i **lvremove** per a eliminar-lo.
+Primer **desmuntarem** el **volum lògic** amb la comanda `umount /mnt/lv01`, per a desmuntar el LV i `lvremove` per a eliminar-lo.
 
 <img src="img/13.png">
 
@@ -168,10 +170,6 @@ I executem la comanda **pvs** per a veure que els volums estan lliures:
 
 **Creem un grup de volums** amb els dos volums físics:
 
-```bash
-sudo vgcreate vg_mirror /dev/sdb /dev/sdc
-```
-
 <img src="img/15.png">
 
 I ara **crearem** el sistema de **mirall (mirror) simple**:
@@ -186,6 +184,20 @@ sudo lvs -a -o +devices | grep mirror
 
 <img src="img/17.png">
 
+### **7.2. Demostració de redundància**
+
+Per a veure que **funciona correctament** **pararem la màquina** i **eliminarem i un disc** i el **substituirem per un altre**.
+
+**Eliminem el segon disc** i **n'afegim un de nou**.
+
+<img src="img/27.png">
+
+<img src="img/28.png">
+
+**Iniciem la màquina** i podem veure que **detecta que el disc no està** i **s’encarrega de fer el mirall automàticament**.
+
+<img src="img/29.png">
+
 ---
 
 ## **8️ Instantànies (Snapshots)**
@@ -197,7 +209,7 @@ sudo lvs -a -o +devices | grep mirror
 El formatem i **muntem a /mnt/lv01** amb la següent comanda:
 
 ```bash
-sudo mount /dev/volgrup/lv01 /mnt/lv01
+mount /dev/volgrup/lv01 /mnt/lv01
 ```
 
 I **creem alguns arxius brossa** a dins amb la comada **fallocate**, que serveix per a **crear arxius d'una mida fixa de manera instantània**:
@@ -207,7 +219,7 @@ I **creem alguns arxius brossa** a dins amb la comada **fallocate**, que serveix
 Ara **crearem la instantània (snapshot)** amb la següent comanda:
 
 ```bash
-lvcreate -L 100M -s -n copia01 /dev/volgrup/lv01
+lvcreate -L 100M -s -n lv_snapshot /dev/volgrup/lv01
 ```
 
 **On té aquest significat:**
@@ -217,17 +229,21 @@ lvcreate -L 100M -s -n copia01 /dev/volgrup/lv01
 - **-n copialv01**: nom de la instantània.  
 - **/dev/volgrup/lv01**: volum lògic del que es farà el snapshot.
 
-## **8.1. Muntant la snapshot**
+### **8.1. Muntant la snapshot**
 
 Després, **muntem la còpia** per veure el contingut amb les següents comandes:
 
 Primer **creem la carpeta al directori /mnt**
 
 ```bash
-sudo mkdir /mnt/snapshot
+mkdir /mnt/snapshot
 ```
 
 I després **muntem la còpia** per a veure el contingut i **podem veure que s’ha realitzat correctament**.
+
+```bash
+mount /dev/volgrup/lv_snapshot /dev/volgrup/lv01
+```
 
 <img src="img/20.png">
 
@@ -240,12 +256,42 @@ També, si **volem provar que la snapshot pot recuperar la informació de la lv0
 Primer **desmuntem les unitats**:
 
 ```bash
-sudo umount /mnt/lv01
-sudo umount /mnt/snapshot
+umount /mnt/lv01
+umount /mnt/snapshot
 ```
 
 I després ja podem **aplicar-la** i podem veure que **ha desaparegut el file04**, per tant, **s’ha restaurat la snapshot correctament**.  
 
 <img src="img/22.png">
 
-[Tornar a enunciat](readme.md)
+---
+
+## **9️ Escalabilitat (Ampliació de Volum)**
+
+Ara **ampliarem el volum anteriorment creat**, per a fer-ho hem d'executar les **següents comandes**:
+
+Primer **desmuntarem el disc** i ho farem amb la **comanda umount.**
+
+Un cop **ja desmuntat**, farem servir la **comanda lvextend** que ens permet **extrendre el volum**:
+
+<img src="img/23.png">
+
+Un cop amb el **volum ampliat**, el **següent pas** serà **ampliar el sistema de fitxers** i ho farem amb les **següents comandes**:
+
+La **primera comanda** serveix per a **comprovar** que **no hi ha erros**, **abans de modificar** el **sistema d’arxius**:
+
+**e2fsck \-f /dev/volgrup/lv01**
+
+<img src="img/24.png">
+
+I un cop **sabem** que està **tot correcte** ja **podem executar la segona comanda** per a **ampliar el volum definitivament**:
+
+**resize2fs /dev/volgrup/lv01**
+
+<img src="img/25.png">
+
+I finalment **veiem que s’ha ampliat correctament**:
+
+<img src="img/26.png">
+
+[Tornar a enunciat](README.md)
