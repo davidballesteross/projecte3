@@ -20,23 +20,16 @@ Un cop establerta la connectivitat *Host-Only*, utilitzarem el protocol **SCP (S
 - `/etc/bind/named.conf.options`  
 - `/etc/bind/named.conf.local` *(revisar que no tingui errors tipogràfics com "cof")*  
 - Arxius de zones dins la carpeta `/etc/bind/zones`
-
-#### Exemple de comanda SCP:
-```bash
-scp usuari@IP_VM:/etc/bind/named.conf.options .
-```
-> 🔸 El punt (`.`) al final indica que l’arxiu es copiarà al **directori actual** de la vostra màquina física.
-
 ---
 
-## 🚀 Fase 2: Integració a GitHub  
+## Fase 2: Integració a GitHub  
 
 ### Pas 2.1: Crear Carpeta i Arxiu `README.md`  
 1. Creeu la carpeta `producte04` i dins d’ella l’arxiu `README.md`.  
    > Si feu servir l’opció *New File* a GitHub, podeu escriure directament `producte04/README.md` per crear la carpeta automàticament.  
 2. Al fitxer `README.md`, afegiu:  
    - **Títol del producte**  
-   - 🧾 **Explicació del contingut**  
+   - **Explicació del contingut**  
 
 ### Pas 2.2: Pujar Arxius  
 1. Pugeu tots els arxius de configuració a la carpeta `producte04`.  
