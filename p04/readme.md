@@ -59,3 +59,5 @@ Podeu consultar tots els documents fent clic al document corresponent:
 - Al arxiu [named.conf.local](named.conf.local) podeu trobar la configuració on es defineixen les zones que allotjarà el servidor.
 - Al arxiu [named.conf.options](named.conf.options) podeu trobar la configuració on estan definides les configuracions generals.
 - A la carpeta [zonas](./zonas) conté els arxius de configuració de les zones.
+
+[Tornar pàgina del projecte](../README.md)
