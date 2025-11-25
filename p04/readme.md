@@ -1,4 +1,4 @@
-# Documentació servidor DNS  
+# Servidor DNS  
 ---
 
 ## Objectiu  
