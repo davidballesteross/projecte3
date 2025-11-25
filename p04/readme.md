@@ -59,10 +59,10 @@ Dins la carpeta `producte04` es troben els següents arxius:
 
 - `named.conf.local`: Arxiu de configuració on es defineixen les zones que allotjarà el servidor.
 - `named.conf.options`: Arxiu de configuració on estan definides les configuracions generals.
-- Carpeta `zones/`: Conté els arxius de configuració de les zones.
+- Carpeta `zonass/`: Conté els arxius de configuració de les zones.
 
 ## Documents
 Podeu consultar tots els documents fent clic al document corresponent:
 - Al arxiu [named.conf.local](named.conf.local) podeu trobar la configuració on es defineixen les zones que allotjarà el servidor.
 - Al arxiu [named.conf.options](named.conf.options) podeu trobar la configuració on estan definides les configuracions generals.
-- A la carpeta [zones](./zones) conté els arxius de configuració de les zones.
+- A la carpeta [zonas](./zonas) conté els arxius de configuració de les zones.
